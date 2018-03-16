@@ -24,6 +24,37 @@
         from apec_user
         where id = #{id,jdbcType=INTEGER}
     </select>
+    <select id="checkUsername" resultType="java.lang.Integer">
+        SELECT count(1) FROM apec_user
+        WHERE username=#{username}
+    </select>
+    <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_user
+        WHERE username=#{username} AND password=#{password}
+    </select>
+    <select id="checkEmail" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM apec_user
+        WHERE email=#{email}
+    </select>
+    <select id="selectQuestionByUsername" resultType="java.lang.String">
+        SELECT question FROM apec_user
+        WHERE username=#{username}
+    </select>
+    <select id="checkAnswer" resultType="java.lang.Integer" parameterType="map">
+        SELECT COUNT(1) FROM apec_user
+        WHERE username=#{username} AND question=#{question} AND answer=#{answer}
+    </select>
+    <select id="checkPassword" resultType="java.lang.Integer" parameterType="map">
+        SELECT COUNT(1) FROM apec_user
+        WHERE id=#{userId} AND password=#{password}
+    </select>
+    <select id="checkEmailByUserId" resultType="java.lang.Integer" parameterType="map">
+        SELECT count(1) FROM apec_user
+        WHERE email=#{email} AND id!=#{userId}
+    </select>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_user
     where id = #{id,jdbcType=INTEGER}
@@ -150,4 +181,9 @@
       update_time = now()
     where id = #{id,jdbcType=INTEGER}
   </update>
+    <update id="updatePasswordByUsername" parameterType="map">
+        UPDATE apec_user
+        SET password = #{passwordNew}, update_time = now()
+        WHERE username = #{username}
+    </update>
 </mapper>
