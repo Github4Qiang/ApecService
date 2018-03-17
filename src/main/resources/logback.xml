@@ -2,7 +2,6 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <!--定义名称为console的appender-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <encoding>UTF-8</encoding>
         <encoder>
             <pattern>[%d{HH:mm:ss.SSS}][%p][%c{40}][%t] %m%n</pattern>
         </encoder>

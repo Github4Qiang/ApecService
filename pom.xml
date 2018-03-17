@@ -203,14 +203,12 @@
         </dependency>
 
         <!-- 日志打印工具 Logback + slf4j -->
-        <!-- logback-core：其它两个模块的基础模块-->
         <!-- logback-classic：它是log4j的一个改良版本，同时它完整实现了slf4j API使你可以很方便地更换成其它日志系统如log4j或JDK14 Logging-->
-        <!-- logback-access：访问模块与Servlet容器集成提供通过Http来访问日志的功能-->
+        <!-- logback-classic 包含了 logback-core 和 slf4j-api -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -224,6 +222,26 @@
             <version>1.7.25</version>
         </dependency>
 
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-simple &ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>slf4j-simple</artifactId>-->
+        <!--<version>1.7.25</version>-->
+        <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; 提供 listener 监听器 &ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.logback-extensions</groupId>-->
+        <!--<artifactId>logback-ext-spring</artifactId>-->
+        <!--<version>0.1.2</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; 把Spring中大量使用common-logging替换成slf4j，只有有个这个包，才能打印出Spring框架本身的信息数据。 &ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>jcl-over-slf4j</artifactId>-->
+        <!--<version>1.7.25</version>-->
+        <!--</dependency>-->
 
         <!-- FTPClient -->
         <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
@@ -265,6 +283,22 @@
             </plugin>
 
             <!-- todo : maven-compiler-plugin -->
+            <!-- geelynote maven的核心插件之-complier插件默认只支持编译Java 1.5，-->
+            <!-- 因此需要加上支持高版本jre的配置，在pom.xml里面加上 增加编译插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <!--我们会将集成的第三方jar包，例如支付宝支付SDK放入到此目录下，在编译时被导入到项目中-->
+                        <!--否则，本地开发时没有问题，但线上发布时，第三方jar包无法被引用，程序会出现No Class Found异常-->
+                        <extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

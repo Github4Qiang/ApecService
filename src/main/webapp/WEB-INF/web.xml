@@ -41,6 +41,15 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--&lt;!&ndash; 这个listener的注册必须在ContextLoaderListener之前。 &ndash;&gt;-->
+    <!--<context-param>-->
+    <!--<param-name>logbackConfigLocation</param-name>-->
+    <!--<param-value>classpath:logback.xml</param-value>-->
+    <!--</context-param>-->
+    <!--<listener>-->
+    <!--<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>-->
+    <!--</listener>-->
+
     <!--RequestContextListener implements ServletRequestListener,-->
     <!--ServletRequestListener extends EventListener-->
     <!--ServletRequestListener监听HTTP请求事件，Web服务器接收的每次请求都会通知该监听器。-->

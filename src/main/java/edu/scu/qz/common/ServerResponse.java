@@ -69,6 +69,10 @@ public class ServerResponse<T> implements Serializable {
         return data;
     }
 
+    public static <T> ServerResponse<T> createByError() {
+        return new ServerResponse<T>(ResponseCode.ERROR.getCode());
+    }
+
     public static <T> ServerResponse<T> createByErrorMessage(String msg) {
         return new ServerResponse<T>(ResponseCode.ERROR.getCode(), msg);
     }
