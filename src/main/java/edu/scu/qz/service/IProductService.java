@@ -6,7 +6,6 @@ import edu.scu.qz.dao.pojo.Product;
 import edu.scu.qz.vo.ProductDetailVo;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface IProductService {
 
     ServerResponse saveOrUpdateProduct(Product product);
