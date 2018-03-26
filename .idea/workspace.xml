@@ -9,50 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" line="20" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02b444ec-6d03-4609-8a94-51cee2a74992" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_2_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/OrderManageController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/OrderController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/ShippingController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IOrderService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShippingService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderItemVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderProductVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShippingVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/zfbinfo.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java20161213173952-source.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java20161213173952.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215-source.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215.jar" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ApecService_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ApecService_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ApecService.iml" afterPath="$PROJECT_DIR$/ApecService.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CartMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CartMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/DateTimeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/DateTimeUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/PropertiesUtil.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/PropertiesUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/apec.properties" afterPath="$PROJECT_DIR$/src/main/resources/apec.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" />
-    </list>
+    <list default="true" id="02b444ec-6d03-4609-8a94-51cee2a74992" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -317,7 +274,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -861,7 +818,7 @@
       <workItem from="1521784983182" duration="1247000" />
       <workItem from="1521789442773" duration="14552000" />
       <workItem from="1522046496555" duration="12776000" />
-      <workItem from="1522074776103" duration="98000" />
+      <workItem from="1522074776103" duration="293000" />
     </task>
     <servers />
   </component>
@@ -880,10 +837,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117811000" />
+    <option name="totallyTimeSpent" value="118006000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -891,7 +848,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -905,7 +862,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53501093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2713348" sideWeight="0.49348533" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
