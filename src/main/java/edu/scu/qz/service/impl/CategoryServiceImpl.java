@@ -6,7 +6,7 @@ import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.CategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.service.ICategoryService;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

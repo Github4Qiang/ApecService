@@ -16,7 +16,7 @@ import edu.scu.qz.util.DateTimeUtil;
 import edu.scu.qz.util.PropertiesUtil;
 import edu.scu.qz.vo.ProductDetailVo;
 import edu.scu.qz.vo.ProductListVo;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
