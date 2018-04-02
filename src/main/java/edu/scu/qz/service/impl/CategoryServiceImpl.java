@@ -6,6 +6,7 @@ import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.CategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.service.ICategoryService;
+import edu.scu.qz.vo.CategoryVo;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -79,6 +80,41 @@ public class CategoryServiceImpl implements ICategoryService {
             categoryList.add(categoryItem.getId());
         }
         return ServerResponse.createBySuccess(categoryList);
+    }
+
+    // 获取前两级品类数据
+    @Override
+    public ServerResponse getTop2Category() {
+        // 获取第一级品类数据
+        List<CategoryVo> categoryVoList = Lists.newArrayList();
+        List<Category> categoryList = categoryMapper.selectCategoryChildrenByParentId(0);
+        for (Category categoryItem : categoryList) {
+            // 获取每个一级品类的子品类
+            List<CategoryVo> categoryLv1VoList = Lists.newArrayList();
+            List<Category> categoryLv1List = categoryMapper.selectCategoryChildrenByParentId(categoryItem.getId());
+            for (Category categoryLv1Item : categoryLv1List) {
+                CategoryVo categoryLv1Vo = assembleCategoryVo(categoryLv1Item);
+                categoryLv1VoList.add(categoryLv1Vo);
+            }
+
+            // 把第一级品类转换成 VO
+            CategoryVo categoryVo = assembleCategoryVo(categoryItem);
+            categoryVo.setChildren(categoryLv1VoList);
+            categoryVoList.add(categoryVo);
+        }
+        return ServerResponse.createBySuccess(categoryVoList);
+    }
+
+    private CategoryVo assembleCategoryVo(Category category) {
+        CategoryVo categoryVo = new CategoryVo();
+        categoryVo.setId(category.getId());
+        categoryVo.setParentId(category.getParentId());
+        categoryVo.setName(category.getName());
+        categoryVo.setStatus(category.getStatus());
+        categoryVo.setSortOrder(category.getSortOrder());
+        categoryVo.setCreateTime(category.getCreateTime());
+        categoryVo.setUpdateTime(category.getUpdateTime());
+        return categoryVo;
     }
 
     private Set<Category> findChildCategories(Set<Category> categorySet, Integer categoryId) {

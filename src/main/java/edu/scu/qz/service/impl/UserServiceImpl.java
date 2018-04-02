@@ -108,7 +108,7 @@ public class UserServiceImpl implements IUserService {
             TokenCache.setKey(TokenCache.TOKEN_PREFIX + username, forgetToken);
             return ServerResponse.createBySuccess(forgetToken);
         }
-        return ServerResponse.createBySuccess("问题的答案错误");
+        return ServerResponse.createByErrorMessage("问题的答案错误");
 
     }
 

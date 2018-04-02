@@ -14,4 +14,5 @@ public interface ICategoryService {
 
     ServerResponse<List<Integer>> selectCategoryAndChildrenById(Integer categoryId);
 
+    ServerResponse getTop2Category();
 }

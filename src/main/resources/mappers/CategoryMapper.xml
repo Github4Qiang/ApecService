@@ -27,6 +27,12 @@
         FROM apec_category
         WHERE parent_id = #{parentId}
     </select>
+    <select id="selectByCategoryName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from apec_category
+        where name = #{name};
+    </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_category
     where id = #{id,jdbcType=INTEGER}

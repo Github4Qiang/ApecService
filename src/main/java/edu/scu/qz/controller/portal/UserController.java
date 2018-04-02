@@ -87,10 +87,10 @@ public class UserController {
         return iUserService.resetPassword(passwordOld, passwordNew, user);
     }
 
-    // 将新的用户信息存到 session 里，直接返回给前端进行更新
+    // 将新的用户信息存到 session 里，返回更新成功的信息，不返回更新后的数据
     @RequestMapping(value = "update_information.do", method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<User> update_information(HttpSession session, User user) {
+    public ServerResponse<String> update_information(HttpSession session, User user) {
         User currentUser = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null) {
             return ServerResponse.createByErrorMessage("用户未登录");
@@ -104,7 +104,7 @@ public class UserController {
             response.getData().setUsername(currentUser.getUsername());
             session.setAttribute(Const.CURRENT_USER, response.getData());
         }
-        return response;
+        return ServerResponse.createBySuccess(response.getMsg());
     }
 
     @RequestMapping(value = "get_information.do", method = RequestMethod.POST)
