@@ -158,6 +158,8 @@ public class OrderServiceImpl implements IOrderService {
                 File targetFile = new File(path, qrFileName);
                 try {
                     FTPUtil.uploadFile(Lists.newArrayList(targetFile));
+                    // 上传完毕，删除 upload 文件夹下文件
+                    targetFile.delete();
                 } catch (IOException e) {
                     logger.error("上传二维码异常", e);
                 }
@@ -209,6 +211,7 @@ public class OrderServiceImpl implements IOrderService {
         payInfoMapper.insert(payInfo);
         return ServerResponse.createBySuccess();
     }
+
 
     @Override
     public ServerResponse queryOrderPayStatus(Integer userId, Long orderNo) {
