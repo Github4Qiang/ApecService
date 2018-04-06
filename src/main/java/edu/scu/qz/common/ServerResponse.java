@@ -81,6 +81,10 @@ public class ServerResponse<T> implements Serializable {
         return new ServerResponse<T>(code, msg);
     }
 
+    public static <T> ServerResponse<T> createByErrorCode(Integer code, String msg, T data) {
+        return new ServerResponse<T>(code, msg, data);
+    }
+
     @Override
     public String toString() {
         return "ServerResponse{" +

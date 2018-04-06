@@ -14,8 +14,13 @@ public class Const {
     public static final String USERNAME = "username";
 
     public interface Role {
-        int ROLE_CUSTOMER = 0; // 普通用户
-        int ROLE_ADMIN = 1; // 管理员
+        int ROLE_CUSTOMER = 0;  // 普通用户
+
+        int ROLE_APPLICANT = 10;  // 已提交店铺信息的卖家
+        int ROLE_CANDIDATE = 11;  // 平台审核成功，待激活的卖家
+        int ROLE_PRODUCER = 12;  // 已入驻的卖家
+
+        int ROLE_ADMIN = 20;     // 管理员
     }
 
     public interface ProductListOrderBy {

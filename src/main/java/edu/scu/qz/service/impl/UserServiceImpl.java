@@ -193,4 +193,13 @@ public class UserServiceImpl implements IUserService {
         }
         return ServerResponse.createByError();
     }
+
+    @Override
+    public ServerResponse checkProducerRole(User user) {
+        if (user != null && user.getRole().intValue() == Const.Role.ROLE_PRODUCER) {
+            // 已经成为卖家 12
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
+    }
 }

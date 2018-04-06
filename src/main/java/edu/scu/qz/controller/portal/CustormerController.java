@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/user/")
-public class UserController {
+public class CustormerController {
 
     @Autowired
     private IUserService iUserService;
@@ -109,7 +109,7 @@ public class UserController {
 
     @RequestMapping(value = "get_information.do", method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<User> get_information(HttpSession session) {
+    public ServerResponse<User> getInformation(HttpSession session) {
         User currentUser = (User) session.getAttribute(Const.CURRENT_USER);
         if (currentUser == null) {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),
