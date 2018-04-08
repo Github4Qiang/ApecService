@@ -26,5 +26,11 @@ public interface IUserService {
 
     ServerResponse checkAdminRole(User user);
 
+    ServerResponse checkApplicantRole(User user);
+
+    ServerResponse checkCandidateRole(User user);
+
     ServerResponse checkProducerRole(User user);
+
+    ServerResponse changeRole(Integer id, int roleApplicant);
 }

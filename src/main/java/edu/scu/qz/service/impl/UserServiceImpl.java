@@ -3,7 +3,9 @@ package edu.scu.qz.service.impl;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.common.TokenCache;
+import edu.scu.qz.dao.idao.ShopMapper;
 import edu.scu.qz.dao.idao.UserMapper;
+import edu.scu.qz.dao.pojo.Shop;
 import edu.scu.qz.dao.pojo.User;
 import edu.scu.qz.service.IUserService;
 import edu.scu.qz.util.MD5Util;
@@ -18,6 +20,8 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private ShopMapper shopMapper;
 
     @Override
     public ServerResponse<User> login(String username, String password) {
@@ -195,11 +199,46 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServerResponse checkProducerRole(User user) {
-        if (user != null && user.getRole().intValue() == Const.Role.ROLE_PRODUCER) {
-            // 已经成为卖家 12
+    public ServerResponse checkApplicantRole(User user) {
+        if (user != null && user.getRole().intValue() == Const.Role.ROLE_APPLICANT) {
             return ServerResponse.createBySuccess();
         }
         return ServerResponse.createByError();
+    }
+
+    @Override
+    public ServerResponse checkCandidateRole(User user) {
+        if (user != null && user.getRole().intValue() == Const.Role.ROLE_CANDIDATE) {
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
+    }
+
+    @Override
+    public ServerResponse checkProducerRole(User user) {
+        if (user != null && user.getRole().intValue() == Const.Role.ROLE_PRODUCER) {
+            // 已经成为卖家 12，返回店铺 id
+            Shop shop = shopMapper.selectByUserId(user.getId());
+            if (shop != null) {
+                return ServerResponse.createBySuccess(shop.getId());
+            } else {
+                return ServerResponse.createByErrorMessage("没有找到该用户创建的店铺");
+            }
+        }
+        return ServerResponse.createByError();
+    }
+
+    @Override
+    public ServerResponse changeRole(Integer id, int roleApplicant) {
+        if (id != null) {
+            User user = new User();
+            user.setId(id);
+            user.setRole(roleApplicant);
+            int rowCount = userMapper.updateByPrimaryKeySelective(user);
+            if (rowCount > 0) {
+                return ServerResponse.createBySuccess();
+            }
+        }
+        return ServerResponse.createByErrorMessage("更改用户角色失败");
     }
 }

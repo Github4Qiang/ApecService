@@ -28,7 +28,7 @@ public class ProducerController {
         if (user == null) {
             return ServerResponse.createByErrorMessage("卖家未登录，无法获得卖家当前信息");
         }
-        // 是否已申请为店主
+        // 是否已申请为店主：是，则返回店铺 id
         return iUserService.checkProducerRole(user);
     }
 

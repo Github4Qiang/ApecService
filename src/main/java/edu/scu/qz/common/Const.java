@@ -143,4 +143,36 @@ public class Const {
             throw new RuntimeException("没有找到对应的枚举: " + code);
         }
     }
+
+    public enum ShopStatus {
+        NORMAL(0, "正常"),
+        UNVERIFY(1, "待审核"),
+        UNACTIVATED(2, "待激活"),
+        LOCK(3, "被锁定");
+
+        private String value;
+        private int code;
+
+        ShopStatus(int code, String value) {
+            this.value = value;
+            this.code = code;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public int getCode() {
+            return code;
+        }
+
+        public static ShopStatus codeOf(int code) {
+            for (ShopStatus shopStatus : values()) {
+                if (shopStatus.getCode() == code) {
+                    return shopStatus;
+                }
+            }
+            throw new RuntimeException("没有找到对应的枚举: " + code);
+        }
+    }
 }

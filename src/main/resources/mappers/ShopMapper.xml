@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scu.qz.dao.idao.ShopMapper">
+    <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Shop">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="shop_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="shop_status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="shop_status_desc" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="producer_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_province" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_city" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_district" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_address" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="server_phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="bank_card" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, shop_name, shop_status, shop_status_desc, producer_id, producer_name, producer_province, 
+    producer_city, producer_district, producer_address, server_phone, bank_card, create_time, 
+    update_time
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from apec_shop
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectByIdUserId" parameterType="map" resultType="int">
+    SELECT COUNT(1) FROM apec_shop WHERE id=#{id} AND producer_id=#{producerId}
+  </select>
+    <select id="countByUserId" resultType="java.lang.Integer" parameterType="int">
+    SELECT COUNT(1) FROM apec_shop WHERE producer_id=#{producerId};
+  </select>
+    <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
+    SELECT * FROM apec_shop WHERE producer_id=#{producerId};
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from apec_shop
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="edu.scu.qz.dao.pojo.Shop">
+    insert into apec_shop (id, shop_name, shop_status, 
+      shop_status_desc, producer_id, producer_name, 
+      producer_province, producer_city, producer_district, 
+      producer_address, server_phone, bank_card, 
+      create_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{shopName,jdbcType=VARCHAR}, #{shopStatus,jdbcType=INTEGER}, 
+      #{shopStatusDesc,jdbcType=VARCHAR}, #{producerId,jdbcType=INTEGER}, #{producerName,jdbcType=VARCHAR}, 
+      #{producerProvince,jdbcType=VARCHAR}, #{producerCity,jdbcType=VARCHAR}, #{producerDistrict,jdbcType=VARCHAR}, 
+      #{producerAddress,jdbcType=VARCHAR}, #{serverPhone,jdbcType=VARCHAR}, #{bankCard,jdbcType=VARCHAR}, 
+      now(), now())
+  </insert>
+    <insert id="insertSelective" parameterType="edu.scu.qz.dao.pojo.Shop">
+        insert into apec_shop
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="shopName != null">
+                shop_name,
+            </if>
+            <if test="shopStatus != null">
+                shop_status,
+            </if>
+            <if test="shopStatusDesc != null">
+                shop_status_desc,
+            </if>
+            <if test="producerId != null">
+                producer_id,
+            </if>
+            <if test="producerName != null">
+                producer_name,
+            </if>
+            <if test="producerProvince != null">
+                producer_province,
+            </if>
+            <if test="producerCity != null">
+                producer_city,
+            </if>
+            <if test="producerDistrict != null">
+                producer_district,
+            </if>
+            <if test="producerAddress != null">
+                producer_address,
+            </if>
+            <if test="serverPhone != null">
+                server_phone,
+            </if>
+            <if test="bankCard != null">
+                bank_card,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="shopName != null">
+                #{shopName,jdbcType=VARCHAR},
+            </if>
+            <if test="shopStatus != null">
+                #{shopStatus,jdbcType=INTEGER},
+            </if>
+            <if test="shopStatusDesc != null">
+                #{shopStatusDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="producerId != null">
+                #{producerId,jdbcType=INTEGER},
+            </if>
+            <if test="producerName != null">
+                #{producerName,jdbcType=VARCHAR},
+            </if>
+            <if test="producerProvince != null">
+                #{producerProvince,jdbcType=VARCHAR},
+            </if>
+            <if test="producerCity != null">
+                #{producerCity,jdbcType=VARCHAR},
+            </if>
+            <if test="producerDistrict != null">
+                #{producerDistrict,jdbcType=VARCHAR},
+            </if>
+            <if test="producerAddress != null">
+                #{producerAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="serverPhone != null">
+                #{serverPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCard != null">
+                #{bankCard,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                now(),
+            </if>
+            <if test="updateTime != null">
+                now(),
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="edu.scu.qz.dao.pojo.Shop">
+        update apec_shop
+        <set>
+            <if test="shopName != null">
+                shop_name = #{shopName,jdbcType=VARCHAR},
+            </if>
+            <if test="shopStatus != null">
+                shop_status = #{shopStatus,jdbcType=INTEGER},
+            </if>
+            <if test="shopStatusDesc != null">
+                shop_status_desc = #{shopStatusDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="producerId != null">
+                producer_id = #{producerId,jdbcType=INTEGER},
+            </if>
+            <if test="producerName != null">
+                producer_name = #{producerName,jdbcType=VARCHAR},
+            </if>
+            <if test="producerProvince != null">
+                producer_province = #{producerProvince,jdbcType=VARCHAR},
+            </if>
+            <if test="producerCity != null">
+                producer_city = #{producerCity,jdbcType=VARCHAR},
+            </if>
+            <if test="producerDistrict != null">
+                producer_district = #{producerDistrict,jdbcType=VARCHAR},
+            </if>
+            <if test="producerAddress != null">
+                producer_address = #{producerAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="serverPhone != null">
+                server_phone = #{serverPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCard != null">
+                bank_card = #{bankCard,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = now(),
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="edu.scu.qz.dao.pojo.Shop">
+    update apec_shop
+    set shop_name = #{shopName,jdbcType=VARCHAR},
+      shop_status = #{shopStatus,jdbcType=INTEGER},
+      shop_status_desc = #{shopStatusDesc,jdbcType=VARCHAR},
+      producer_id = #{producerId,jdbcType=INTEGER},
+      producer_name = #{producerName,jdbcType=VARCHAR},
+      producer_province = #{producerProvince,jdbcType=VARCHAR},
+      producer_city = #{producerCity,jdbcType=VARCHAR},
+      producer_district = #{producerDistrict,jdbcType=VARCHAR},
+      producer_address = #{producerAddress,jdbcType=VARCHAR},
+      server_phone = #{serverPhone,jdbcType=VARCHAR},
+      bank_card = #{bankCard,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = now()
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
