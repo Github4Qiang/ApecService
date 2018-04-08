@@ -6,22 +6,62 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" line="20" mnemonic="9" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" line="105" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b444ec-6d03-4609-8a94-51cee2a74992" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICartMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICategoryMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderItemMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IPayInfoMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IProductMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShippingMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopOrderMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IUserMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICartMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICategoryMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderItemMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IPayInfoMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IProductMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShippingMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopOrderMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IUserMapper.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CartMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CartMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CategoryMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CategoryMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ProductMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ProductMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShopMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShopMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/UserMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Category.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Category.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Order.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Order.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/OrderItem.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/OrderItem.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Product.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Product.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shop.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shop.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/apec.properties" afterPath="$PROJECT_DIR$/src/main/resources/apec.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PayInfoMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ShopMapper.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,51 +80,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProducerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java">
+      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="-3585">
+              <caret line="226" column="0" lean-forward="true" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+              <folding>
+                <element signature="method#assembleShippingVo#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#dumpResponse#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#cleanCart#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#reduceProductStock#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#assembleOrder#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#generateOrderNo#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#getOrderTotalPrice#0;class#OrderServiceImpl#0" expanded="false" />
+                <element signature="method#getCartOrderItem#0;class#OrderServiceImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderItemVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderItemVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apec.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/apec.properties">
+      <file leaf-file-name="OrderProductVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderProductVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="76">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopManageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java">
+      <file leaf-file-name="OrderVo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IShopService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state relative-caret-position="608">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,8 +135,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -144,57 +183,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/ShippingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/DateTimeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/util/PropertiesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/trade/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alipay/demo/trade/DemoHbRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alipay/demo/trade/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CartMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShippingVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderItemVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderProductVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IOrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/OrderManageController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/scu/qz/dao/idao/CategoryMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/CategoryVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/ICategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CategoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/OrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/test.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/portal/customer/user/LoginTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/portal/customer/user/RegisterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/openshop/ProducerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/ServerResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/ResponseCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CustormerController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShopMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/ShopMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IShopMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IShippingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IShippingMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IPayInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IPayInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IOrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/IOrderItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/IOrderItemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IPayInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/apec.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/PayInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/ShopOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/ShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICartMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IPayInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShippingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopOrderMapper.java" />
       </list>
     </option>
   </component>
@@ -240,9 +279,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="811" />
+    <option name="width" value="1116" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -335,54 +374,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="cybershop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -403,7 +394,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qz" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="idao" type="462c0819:PsiDirectoryNode" />
+              <item name="inherit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
@@ -431,15 +423,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
               <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -456,6 +439,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+              <item name="inherit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
@@ -504,15 +496,20 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="edu.scu.qz.util" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Diploma-Project\Useable-Resource\ApecService\src\main\resources\mappers\inherit" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.scu.qz.dao.idao.inherit" />
+      <recent name="edu.scu.qz.dao.idao" />
       <recent name="edu.scu.qz.common" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Diploma-Project\Useable-Resource\ApecService\src\main\resources\mappers\inherit" />
+      <recent name="F:\Diploma-Project\Useable-Resource\ApecService\src\main\resources\mappers" />
       <recent name="F:\毕业设计\可用资源\ApecService\src\main\java" />
       <recent name="F:\毕业设计\可用资源\ApecService\src\main\webapp\WEB-INF\lib" />
       <recent name="F:\毕业设计\可用资源\ApecService\src\main\resources" />
-      <recent name="F:\毕业设计\可用资源\ApecService" />
-      <recent name="F:\毕业设计\可用资源\ApecService\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="edu.scu.qz.vo" />
@@ -573,7 +570,7 @@
     <configuration name="CategoryMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="edu.scu.qz.dao.idao.*" />
+          <option name="PATTERN" value="edu.scu.qz.dao.idao.inherit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -858,7 +855,7 @@
       <workItem from="1522850422421" duration="1558000" />
       <workItem from="1522903440298" duration="11515000" />
       <workItem from="1523070566439" duration="14177000" />
-      <workItem from="1523157748427" duration="1132000" />
+      <workItem from="1523157748427" duration="7792000" />
     </task>
     <servers />
   </component>
@@ -895,7 +892,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191172000" />
+    <option name="totallyTimeSpent" value="197832000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -907,7 +904,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -922,15 +919,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3954496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3238512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2833698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27735645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27789935" sideWeight="0.49348533" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19826652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14552239" sideWeight="0.49348533" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -940,7 +938,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -958,1267 +955,487 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.txt" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        <state relative-caret-position="247">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/scu/qz/dao/idao/CategoryMapperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShippingMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="110" selection-end-column="1" />
+        <state relative-caret-position="152">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/FileServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ProductMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/PayInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="24" />
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.8.1/selenium-support-3.8.1.pom">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/OrderItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="133" column="18" lean-forward="false" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
+        <state relative-caret-position="304">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.pom">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state relative-caret-position="152">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="uml://MAVEN/edu.scu.qz:apec-service:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>edu.scu.qz:apec-service:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="1969.7606314144298" y="1557.0">edu.scu.qz:apec-service:1.0-SNAPSHOT</node>
-            <node x="674.7292771908797" y="1306.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE</node>
-            <node x="655.2277366775879" y="313.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE</node>
-            <node x="523.2277366775879" y="192.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE</node>
-            <node x="721.7277366775879" y="784.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE</node>
-            <node x="533.1042771908797" y="81.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE</node>
-            <node x="513.6042771908797" y="0.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE/commons-logging:commons-logging:jar:1.2</node>
-            <node x="875.8887569832386" y="313.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-expression:jar:4.3.12.RELEASE</node>
-            <node x="597.125" y="1175.0">org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE</node>
-            <node x="435.25" y="784.0">org.springframework:spring-jdbc:jar:4.3.12.RELEASE</node>
-            <node x="4718.470948874747" y="1306.0">org.springframework:spring-aspects:jar:4.3.12.RELEASE</node>
-            <node x="4720.470948874747" y="1175.0">org.springframework:spring-aspects:jar:4.3.12.RELEASE/org.aspectj:aspectjweaver:jar:1.8.9</node>
-            <node x="3249.167377446176" y="1306.0">org.aspectj:aspectjweaver:jar:1.7.3</node>
-            <node x="1317.7292771908797" y="1306.0">org.aspectj:aspectjrt:jar:1.6.11</node>
-            <node x="186.0" y="192.0">org.springframework:spring-test:jar:4.3.12.RELEASE</node>
-            <node x="268.25" y="313.0">org.springframework:spring-oxm:jar:4.3.12.RELEASE</node>
-            <node x="389.25" y="313.0">org.springframework:spring-tx:jar:4.3.12.RELEASE</node>
-            <node x="3738.470948874747" y="1306.0">org.mybatis:mybatis:jar:3.4.5</node>
-            <node x="1124.7292771908797" y="1306.0">org.mybatis.generator:mybatis-generator-core:jar:1.3.5</node>
-            <node x="2544.0106314144296" y="1306.0">com.github.pagehelper:pagehelper:jar:5.1.2</node>
-            <node x="2548.5106314144296" y="1175.0">com.github.pagehelper:pagehelper:jar:5.1.2/com.github.jsqlparser:jsqlparser:jar:1.0</node>
-            <node x="1576.3542771908792" y="1306.0">org.mybatis:mybatis-spring:jar:1.3.1</node>
-            <node x="2799.0106314144296" y="1306.0">commons-dbcp:commons-dbcp:jar:1.4</node>
-            <node x="2800.5106314144296" y="1175.0">commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4</node>
-            <node x="4008.470948874747" y="1306.0">mysql:mysql-connector-java:jar:5.1.44</node>
-            <node x="0.0" y="1306.0">jstl:jstl:jar:1.2</node>
-            <node x="977.7292771908797" y="1306.0">javax.servlet:javax.servlet-api:jar:3.1.0</node>
-            <node x="4401.470948874747" y="1306.0">javax.servlet.jsp:javax.servlet.jsp-api:jar:2.2.1</node>
-            <node x="2171.5106314144296" y="1306.0">com.fasterxml.jackson.core:jackson-databind:jar:2.9.2</node>
-            <node x="2129.7606314144296" y="1175.0">com.fasterxml.jackson.core:jackson-databind:jar:2.9.2/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
-            <node x="2300.7606314144296" y="1175.0">com.fasterxml.jackson.core:jackson-core:jar:2.9.2</node>
-            <node x="3837.470948874747" y="1306.0">com.fasterxml.jackson.core:jackson-annotations:jar:2.9.2</node>
-            <node x="4568.470948874747" y="1306.0">org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
-            <node x="2672.7606314144296" y="1306.0">junit:junit:jar:4.12</node>
-            <node x="817.7292771908797" y="1306.0">org.apache.tomcat:tomcat-servlet-api:jar:7.0.64</node>
-            <node x="70.0" y="1306.0">commons-fileupload:commons-fileupload:jar:1.3.2</node>
-            <node x="93.5" y="1175.0">commons-fileupload:commons-fileupload:jar:1.3.2/commons-io:commons-io:jar:2.2</node>
-            <node x="1433.3542771908794" y="1306.0">ch.qos.logback:logback-classic:jar:1.2.3</node>
-            <node x="1376.8542771908797" y="1175.0">ch.qos.logback:logback-core:jar:1.2.3</node>
-            <node x="1601.227736677588" y="1175.0">org.slf4j:slf4j-api:jar:1.7.25</node>
-            <node x="4187.470948874747" y="1306.0">commons-net:commons-net:jar:3.3</node>
-            <node x="564.7292771908797" y="1306.0">joda-time:joda-time:jar:2.9.9</node>
-            <node x="1987.5106314144298" y="1306.0">org.apache.commons:commons-collections4:jar:4.1</node>
-            <node x="2393.0106314144296" y="1306.0">commons-codec:commons-codec:jar:1.10</node>
-            <node x="1780.6932568852287" y="1306.0">commons-configuration:commons-configuration:jar:1.10</node>
-            <node x="1733.1932568852287" y="1175.0">commons-lang:commons-lang:jar:2.6</node>
-            <node x="1874.1932568852287" y="1175.0">commons-logging:commons-logging:jar:1.1.1</node>
-            <node x="4321.470948874747" y="1306.0">com.google.zxing:core:jar:2.1</node>
-            <node x="4858.470948874747" y="1306.0">com.google.code.gson:gson:jar:2.3.1</node>
-            <node x="2662.5106314144296" y="1175.0">org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="3605.470948874747" y="1306.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1</node>
-            <node x="3901.408931488403" y="313.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1</node>
-            <node x="3195.6014576420066" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1</node>
-            <node x="3466.668832171208" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1</node>
-            <node x="4323.425975028351" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1</node>
-            <node x="3004.6863371767377" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1</node>
-            <node x="3924.6209488747472" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1</node>
-            <node x="3803.1209488747472" y="784.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1</node>
-            <node x="4142.425975028351" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1</node>
-            <node x="3677.720948874747" y="1175.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1</node>
-            <node x="3350.903574345546" y="313.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5</node>
-            <node x="3471.903574345546" y="313.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3</node>
-            <node x="4233.19610049915" y="313.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0</node>
-            <node x="4262.592641695017" y="192.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.code.findbugs:jsr305:jar:1.3.9</node>
-            <node x="4351.592641695018" y="192.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.errorprone:error_prone_annotations:jar:2.0.18</node>
-            <node x="3961.69610049915" y="192.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.j2objc:j2objc-annotations:jar:1.1</node>
-            <node x="4548.592641695017" y="192.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/org.codehaus.mojo:animal-sniffer-annotations:jar:1.14</node>
-            <node x="3613.903574345546" y="313.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3</node>
-            <node x="3755.9586004991497" y="192.0">org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-23.42857142857156" y="-15.5" />
-              <point x="3983.1923774461757" y="1085.0" />
-              <point x="3995.6209488747472" y="1085.0" />
-              <point x="3995.6209488747472" y="484.0" />
-              <point x="3560.0146854566574" y="484.0" />
-              <point x="27.111111111111313" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-configuration:commons-configuration:jar:1.10">
-              <point x="-4.223684210526244" y="-15.5" />
-              <point x="2019.0369472039035" y="1367.0" />
-              <point x="1867.1932568852287" y="1367.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="ch.qos.logback:logback-classic:jar:1.2.3">
-              <point x="-15.48684210526335" y="-15.5" />
-              <point x="2007.7737893091664" y="1407.0" />
-              <point x="1494.8542771908794" y="1407.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.apache.commons:commons-collections4:jar:4.1">
-              <point x="1.4078947368420813" y="-15.5" />
-              <point x="2024.6685261512719" y="1357.0" />
-              <point x="2069.5106314144296" y="1357.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="24.71428571428578" y="-15.5" />
-              <point x="3307.4257518796985" y="674.0" />
-              <point x="3919.408931488403" y="674.0" />
-              <point x="-36.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1">
-              <point x="28.25" y="-15.5" />
-              <point x="3690.220948874747" y="1256.0" />
-              <point x="4222.925975028351" y="1256.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="4406.425975028351" y="845.0" />
-              <point x="4372.620948874747" y="845.0" />
-              <point x="4372.620948874747" y="404.0" />
-              <point x="3696.0702410122126" y="404.0" />
-              <point x="38.666666666666515" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-lang:commons-lang:jar:2.6">
-              <point x="-7.039473684210407" y="-15.5" />
-              <point x="2016.2211577302194" y="1377.0" />
-              <point x="1770.1932568852287" y="1377.0" />
-              <point x="1770.1932568852287" y="1286.0" />
-              <point x="1763.4432568852287" y="1286.0" />
-              <point x="-30.25" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1">
-              <point x="-4.035714285714221" y="-15.5" />
-              <point x="3657.935234589033" y="1226.0" />
-              <point x="3546.168832171208" y="1226.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="59.57142857142844" y="-15.5" />
-              <point x="3133.757765748166" y="1055.0" />
-              <point x="3813.8084488747472" y="1055.0" />
-              <point x="-74.8125" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-annotations:jar:2.9.2">
-              <point x="32.381578947368325" y="-15.5" />
-              <point x="2055.642210361798" y="1467.0" />
-              <point x="3912.970948874747" y="1467.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="69.0" y="-15.5" />
-              <point x="4291.925975028351" y="1155.0" />
-              <point x="4394.620948874747" y="1155.0" />
-              <point x="4394.620948874747" y="263.0" />
-              <point x="3826.50860049915" y="263.0" />
-              <point x="29.050000000000182" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="19.42857142857156" y="-15.5" />
-              <point x="3765.1495203033187" y="1035.0" />
-              <point x="3781.6209488747472" y="1035.0" />
-              <point x="3781.6209488747472" y="694.0" />
-              <point x="3943.408931488403" y="694.0" />
-              <point x="-12.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="44.39285714285734" y="-15.5" />
-              <point x="3706.3638060176045" y="1276.0" />
-              <point x="4510.8238371767375" y="1276.0" />
-              <point x="4510.8238371767375" y="374.0" />
-              <point x="4003.408931488403" y="374.0" />
-              <point x="48.0" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.core:jackson-databind:jar:2.9.2" target="com.fasterxml.jackson.core:jackson-databind:jar:2.9.2/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0">
-              <point x="-33.75" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="485.75" y="172.0" />
-              <point x="568.8042771908795" y="172.0" />
-              <point x="-15.300000000000182" y="15.5" />
-            </edge>
-            <edge source="ch.qos.logback:logback-classic:jar:1.2.3" target="ch.qos.logback:logback-core:jar:1.2.3">
-              <point x="-30.749999999999545" y="-15.5" />
-              <point x="1464.1042771908799" y="1286.0" />
-              <point x="1460.8542771908797" y="1286.0" />
-              <point x="28.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE">
-              <point x="-10.25" y="-15.5" />
-              <point x="725.9792771908797" y="1266.0" />
-              <point x="710.125" y="1266.0" />
-              <point x="710.125" y="764.0" />
-              <point x="704.7277366775879" y="764.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-45.42857142857156" y="-15.5" />
-              <point x="3500.7402607426366" y="985.0" />
-              <point x="3410.7828947368416" y="985.0" />
-              <point x="3410.7828947368416" y="574.0" />
-              <point x="3390.181352123324" y="574.0" />
-              <point x="-11.222222222222172" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="74.14285714285734" y="-15.5" />
-              <point x="3356.2443147848644" y="1065.0" />
-              <point x="3835.1834488747472" y="1065.0" />
-              <point x="-53.4375" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="71.14285714285734" y="-15.5" />
-              <point x="4477.568832171208" y="1155.0" />
-              <point x="4465.211689314065" y="1155.0" />
-              <point x="4465.211689314065" y="253.0" />
-              <point x="3834.8086004991496" y="253.0" />
-              <point x="37.34999999999991" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-39.71428571428578" y="-15.5" />
-              <point x="3034.472051462452" y="1145.0" />
-              <point x="2983.1863371767377" y="1145.0" />
-              <point x="2983.1863371767377" y="564.0" />
-              <point x="3367.7369076788796" y="564.0" />
-              <point x="-33.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="52.46428571428578" y="-15.5" />
-              <point x="3714.435234589033" y="1286.0" />
-              <point x="4518.895265748166" y="1286.0" />
-              <point x="4518.895265748166" y="364.0" />
-              <point x="4298.362767165816" y="364.0" />
-              <point x="30.666666666666515" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.apache.tomcat:tomcat-servlet-api:jar:7.0.64">
-              <point x="-29.565789473684163" y="-15.5" />
-              <point x="1993.6948419407456" y="1457.0" />
-              <point x="887.7292771908797" y="1457.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE">
-              <point x="-44.25" y="-15.5" />
-              <point x="736.4777366775879" y="764.0" />
-              <point x="737.7277366775879" y="764.0" />
-              <point x="33.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="-37.5" y="-15.5" />
-              <point x="609.625" y="1155.0" />
-              <point x="589.7277366775879" y="1155.0" />
-              <point x="589.7277366775879" y="293.0" />
-              <point x="594.584879534731" y="293.0" />
-              <point x="15.857142857143117" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="19.857142857142662" y="-15.5" />
-              <point x="3094.0434800338803" y="1035.0" />
-              <point x="3126.582059985858" y="1035.0" />
-              <point x="3126.582059985858" y="664.0" />
-              <point x="3907.408931488403" y="664.0" />
-              <point x="-48.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-test:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="234.5" y="142.0" />
-              <point x="538.20427719088" y="142.0" />
-              <point x="-45.899999999999636" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="12.107142857142662" y="-15.5" />
-              <point x="3674.07809173189" y="1236.0" />
-              <point x="3899.3084488747472" y="1236.0" />
-              <point x="10.6875" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="-14.25" y="-15.5" />
-              <point x="3874.3709488747472" y="514.0" />
-              <point x="3667.0702410122126" y="514.0" />
-              <point x="9.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-oxm:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="-25.25" y="-15.5" />
-              <point x="293.5" y="152.0" />
-              <point x="548.4042771908798" y="152.0" />
-              <point x="-35.69999999999982" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.google.zxing:core:jar:2.1">
-              <point x="40.82894736842127" y="-15.5" />
-              <point x="2064.0895787828513" y="1497.0" />
-              <point x="4351.470948874747" y="1497.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="com.github.pagehelper:pagehelper:jar:5.1.2" target="com.github.pagehelper:pagehelper:jar:5.1.2/com.github.jsqlparser:jsqlparser:jar:1.0">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-aspects:jar:4.3.12.RELEASE" target="org.springframework:spring-aspects:jar:4.3.12.RELEASE/org.aspectj:aspectjweaver:jar:1.8.9">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-42.75" y="-15.5" />
-              <point x="3845.8709488747472" y="524.0" />
-              <point x="3546.4591299011017" y="524.0" />
-              <point x="13.555555555555657" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="junit:junit:jar:4.12">
-              <point x="15.48684210526335" y="-15.5" />
-              <point x="2038.7474735196931" y="1407.0" />
-              <point x="2701.7606314144296" y="1407.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-19.857142857142662" y="-15.5" />
-              <point x="3054.329194319595" y="1135.0" />
-              <point x="3026.3718283138" y="1135.0" />
-              <point x="3026.3718283138" y="594.0" />
-              <point x="3492.2369076788796" y="594.0" />
-              <point x="-40.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1">
-              <point x="36.32142857142844" y="-15.5" />
-              <point x="3698.2923774461756" y="1266.0" />
-              <point x="4406.425975028351" y="1266.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="-24.75" y="-15.5" />
-              <point x="679.9777366775879" y="293.0" />
-              <point x="610.4420223918733" y="293.0" />
-              <point x="31.714285714285325" y="15.5" />
-            </edge>
-            <edge source="commons-fileupload:commons-fileupload:jar:1.3.2" target="commons-fileupload:commons-fileupload:jar:1.3.2/commons-io:commons-io:jar:2.2">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.3.12.RELEASE" target="org.springframework:spring-tx:jar:4.3.12.RELEASE">
-              <point x="-33.66666666666697" y="-15.5" />
-              <point x="452.08333333333303" y="764.0" />
-              <point x="453.75" y="764.0" />
-              <point x="21.5" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.mybatis:mybatis:jar:3.4.5">
-              <point x="29.565789473684163" y="-15.5" />
-              <point x="2052.8264208881137" y="1457.0" />
-              <point x="3777.970948874747" y="1457.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="-12.5" y="-15.5" />
-              <point x="634.625" y="1155.0" />
-              <point x="644.7277366775879" y="1155.0" />
-              <point x="644.7277366775879" y="172.0" />
-              <point x="589.20427719088" y="172.0" />
-              <point x="5.100000000000364" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="46.0" y="-15.5" />
-              <point x="4268.925975028351" y="1145.0" />
-              <point x="4288.141074345546" y="1145.0" />
-              <point x="4288.141074345546" y="764.0" />
-              <point x="4283.029433832483" y="764.0" />
-              <point x="15.333333333333485" y="15.5" />
-            </edge>
-            <edge source="ch.qos.logback:logback-classic:jar:1.2.3" target="org.slf4j:slf4j-api:jar:1.7.25">
-              <point x="30.750000000000455" y="-15.5" />
-              <point x="1525.6042771908799" y="1286.0" />
-              <point x="1621.227736677588" y="1286.0" />
-              <point x="-20.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.mybatis:mybatis-spring:jar:1.3.1">
-              <point x="-12.671052631578732" y="-15.5" />
-              <point x="2010.589578782851" y="1397.0" />
-              <point x="1636.8542771908792" y="1397.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="4006.6209488747472" y="474.0" />
-              <point x="3676.7369076788796" y="474.0" />
-              <point x="19.333333333333485" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-fileupload:commons-fileupload:jar:1.3.2">
-              <point x="-49.276315789473756" y="-15.5" />
-              <point x="1973.984315624956" y="1527.0" />
-              <point x="147.0" y="1527.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="-46.85714285714289" y="-15.5" />
-              <point x="3959.763806017604" y="925.0" />
-              <point x="3920.6834488747472" y="925.0" />
-              <point x="32.0625" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-58.28571428571422" y="-15.5" />
-              <point x="3687.435234589033" y="965.0" />
-              <point x="3462.082059985858" y="965.0" />
-              <point x="3462.082059985858" y="564.0" />
-              <point x="3401.403574345546" y="564.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.codehaus.jackson:jackson-core-asl:jar:1.9.13">
-              <point x="46.46052631578959" y="-15.5" />
-              <point x="2069.7211577302196" y="1517.0" />
-              <point x="4633.470948874747" y="1517.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="-52.46428571428578" y="-15.5" />
-              <point x="3609.5066631604614" y="1286.0" />
-              <point x="2953.114908605309" y="1286.0" />
-              <point x="2953.114908605309" y="243.0" />
-              <point x="3760.10860049915" y="243.0" />
-              <point x="-37.34999999999991" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="47.42857142857156" y="-15.5" />
-              <point x="4454.211689314065" y="384.0" />
-              <point x="4290.69610049915" y="384.0" />
-              <point x="23.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.slf4j:slf4j-api:jar:1.7.25">
-              <point x="-9.85526315789457" y="-15.5" />
-              <point x="2013.4053682565352" y="1387.0" />
-              <point x="1707.8542771908792" y="1387.0" />
-              <point x="1707.8542771908792" y="1286.0" />
-              <point x="1661.227736677588" y="1286.0" />
-              <point x="20.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.mybatis.generator:mybatis-generator-core:jar:1.3.5">
-              <point x="-23.934210526315837" y="-15.5" />
-              <point x="1999.326420888114" y="1437.0" />
-              <point x="1211.2292771908797" y="1437.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-36.32142857142844" y="-15.5" />
-              <point x="3625.6495203033187" y="1266.0" />
-              <point x="2994.1863371767377" y="1266.0" />
-              <point x="2994.1863371767377" y="584.0" />
-              <point x="3478.681352123324" y="584.0" />
-              <point x="-54.22222222222217" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
-              <point x="-26.75" y="-15.5" />
-              <point x="1996.5106314144298" y="1447.0" />
-              <point x="1041.2292771908797" y="1447.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="commons-configuration:commons-configuration:jar:1.10" target="commons-logging:commons-logging:jar:1.1.1">
-              <point x="43.25" y="-15.5" />
-              <point x="-35.25" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="3546.168832171208" y="1035.0" />
-              <point x="3530.4363371767377" y="1035.0" />
-              <point x="3530.4363371767377" y="654.0" />
-              <point x="3647.7369076788796" y="654.0" />
-              <point x="-9.666666666666515" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.google.code.gson:gson:jar:2.3.1">
-              <point x="52.09210526315792" y="-15.5" />
-              <point x="2075.352736677588" y="1537.0" />
-              <point x="4889.970948874747" y="1537.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-38.85714285714266" y="-15.5" />
-              <point x="3706.8638060176045" y="955.0" />
-              <point x="3594.720948874747" y="955.0" />
-              <point x="3594.720948874747" y="544.0" />
-              <point x="3532.903574345546" y="544.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-49.42857142857156" y="-15.5" />
-              <point x="3232.672886213435" y="1015.0" />
-              <point x="3137.582059985858" y="1015.0" />
-              <point x="3137.582059985858" y="574.0" />
-              <point x="3378.9591299011017" y="574.0" />
-              <point x="-22.444444444444343" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="23.0" y="-15.5" />
-              <point x="4245.925975028351" y="1135.0" />
-              <point x="4277.141074345546" y="1135.0" />
-              <point x="4277.141074345546" y="424.0" />
-              <point x="3979.408931488403" y="424.0" />
-              <point x="24.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-71.25" y="-15.5" />
-              <point x="3817.3709488747472" y="534.0" />
-              <point x="3423.8480187899904" y="534.0" />
-              <point x="22.444444444444343" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="24.75" y="-15.5" />
-              <point x="729.4777366775879" y="162.0" />
-              <point x="599.4042771908798" y="162.0" />
-              <point x="15.300000000000182" y="15.5" />
-            </edge>
-            <edge source="junit:junit:jar:4.12" target="org.hamcrest:hamcrest-core:jar:1.3">
-              <point x="0.0" y="-15.5" />
-              <point x="2701.7606314144296" y="1286.0" />
-              <point x="2692.0106314144296" y="1286.0" />
-              <point x="-29.5" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE">
-              <point x="37.5" y="-15.5" />
-              <point x="684.625" y="1155.0" />
-              <point x="751.2277366775879" y="1155.0" />
-              <point x="-29.5" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="0.0" y="-15.5" />
-              <point x="3657.403574345546" y="283.0" />
-              <point x="3793.3086004991496" y="283.0" />
-              <point x="-4.150000000000091" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-expression:jar:4.3.12.RELEASE">
-              <point x="30.75" y="-15.5" />
-              <point x="766.9792771908797" y="1276.0" />
-              <point x="980.1387569832386" y="1276.0" />
-              <point x="34.75" y="15.5" />
-            </edge>
-            <edge source="com.fasterxml.jackson.core:jackson-databind:jar:2.9.2" target="com.fasterxml.jackson.core:jackson-core:jar:2.9.2">
-              <point x="33.75" y="-15.5" />
-              <point x="2272.7606314144296" y="1286.0" />
-              <point x="2328.0106314144296" y="1286.0" />
-              <point x="-27.25" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-test:jar:4.3.12.RELEASE">
-              <point x="-46.46052631578959" y="-15.5" />
-              <point x="1976.8001050986402" y="1517.0" />
-              <point x="234.5" y="1517.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-net:commons-net:jar:3.3">
-              <point x="38.01315789473665" y="-15.5" />
-              <point x="2061.273789309166" y="1487.0" />
-              <point x="4244.470948874747" y="1487.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="38.85714285714266" y="-15.5" />
-              <point x="3784.57809173189" y="1085.0" />
-              <point x="3877.9334488747472" y="1085.0" />
-              <point x="-10.6875" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-70.28571428571422" y="-15.5" />
-              <point x="3936.3352345890326" y="935.0" />
-              <point x="3563.4363371767377" y="935.0" />
-              <point x="3563.4363371767377" y="554.0" />
-              <point x="3412.6257965677682" y="554.0" />
-              <point x="11.222222222222172" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-aop:jar:4.3.12.RELEASE">
-              <point x="12.5" y="-15.5" />
-              <point x="659.625" y="1155.0" />
-              <point x="661.625" y="1155.0" />
-              <point x="661.625" y="764.0" />
-              <point x="671.7277366775879" y="764.0" />
-              <point x="-33.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-databind:jar:2.9.2">
-              <point x="4.223684210526244" y="-15.5" />
-              <point x="2027.484315624956" y="1367.0" />
-              <point x="2239.0106314144296" y="1367.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="jstl:jstl:jar:1.2">
-              <point x="-52.09210526315792" y="-15.5" />
-              <point x="1971.1685261512719" y="1537.0" />
-              <point x="25.0" y="1537.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="3074.1863371767377" y="1125.0" />
-              <point x="3055.5434800338808" y="1125.0" />
-              <point x="3055.5434800338808" y="624.0" />
-              <point x="3618.7369076788796" y="624.0" />
-              <point x="-38.666666666666515" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="javax.servlet.jsp:javax.servlet.jsp-api:jar:2.2.1">
-              <point x="43.64473684210543" y="-15.5" />
-              <point x="2066.9053682565354" y="1507.0" />
-              <point x="4474.970948874747" y="1507.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-core:jar:2.9.2">
-              <point x="7.039473684210407" y="-15.5" />
-              <point x="2030.3001050986402" y="1377.0" />
-              <point x="2382.5106314144296" y="1377.0" />
-              <point x="27.25" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-tx:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="-21.5" y="-15.5" />
-              <point x="410.75" y="162.0" />
-              <point x="558.6042771908797" y="162.0" />
-              <point x="-25.5" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="joda-time:joda-time:jar:2.9.9">
-              <point x="-35.19736842105249" y="-15.5" />
-              <point x="1988.0632629933773" y="1477.0" />
-              <point x="609.7292771908797" y="1477.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.errorprone:error_prone_annotations:jar:2.0.18">
-              <point x="8.625" y="-15.5" />
-              <point x="4276.32110049915" y="283.0" />
-              <point x="4440.092641695018" y="283.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="42.75" y="-15.5" />
-              <point x="3931.3709488747472" y="704.0" />
-              <point x="3955.408931488403" y="704.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.aspectj:aspectjrt:jar:1.6.11">
-              <point x="-21.118421052631675" y="-15.5" />
-              <point x="2002.142210361798" y="1427.0" />
-              <point x="1359.7292771908797" y="1427.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="-51.25" y="-15.5" />
-              <point x="684.9792771908797" y="1286.0" />
-              <point x="578.7277366775879" y="1286.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-logging:commons-logging:jar:1.1.1">
-              <point x="-1.4078947368420813" y="-15.5" />
-              <point x="2021.8527366775877" y="1357.0" />
-              <point x="1977.0106314144298" y="1357.0" />
-              <point x="1977.0106314144298" y="1286.0" />
-              <point x="1979.9432568852287" y="1286.0" />
-              <point x="35.25" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.hamcrest:hamcrest-core:jar:1.3">
-              <point x="18.302631578947512" y="-15.5" />
-              <point x="2041.5632629933773" y="1417.0" />
-              <point x="2741.2606314144296" y="1417.0" />
-              <point x="2741.2606314144296" y="1286.0" />
-              <point x="2751.0106314144296" y="1286.0" />
-              <point x="29.5" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="45.42857142857156" y="-15.5" />
-              <point x="3591.5974035997797" y="1045.0" />
-              <point x="3792.6209488747472" y="1045.0" />
-              <point x="3792.6209488747472" y="734.0" />
-              <point x="4252.362767165816" y="734.0" />
-              <point x="-15.333333333333485" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="-14.75" y="-15.5" />
-              <point x="765.9777366775879" y="764.0" />
-              <point x="775.2277366775879" y="764.0" />
-              <point x="775.2277366775879" y="283.0" />
-              <point x="626.2991652490164" y="283.0" />
-              <point x="47.57142857142844" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="-5.100000000000364" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="3282.1014576420066" y="1035.0" />
-              <point x="3264.4257518796985" y="1035.0" />
-              <point x="3264.4257518796985" y="634.0" />
-              <point x="3628.403574345546" y="634.0" />
-              <point x="-29.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-46.0" y="-15.5" />
-              <point x="4176.925975028351" y="905.0" />
-              <point x="3984.6209488747472" y="905.0" />
-              <point x="3984.6209488747472" y="494.0" />
-              <point x="3435.0702410122126" y="494.0" />
-              <point x="33.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE/commons-logging:commons-logging:jar:1.2">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1">
-              <point x="26.75" y="-15.5" />
-              <point x="2050.0106314144296" y="1447.0" />
-              <point x="3661.970948874747" y="1447.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="-68.14285714285688" y="-15.5" />
-              <point x="3478.0259750283512" y="995.0" />
-              <point x="3159.582059985858" y="995.0" />
-              <point x="3159.582059985858" y="273.0" />
-              <point x="3785.00860049915" y="273.0" />
-              <point x="-12.449999999999818" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-dbcp:commons-dbcp:jar:1.4">
-              <point x="21.118421052631675" y="-15.5" />
-              <point x="2044.3790524670615" y="1427.0" />
-              <point x="2862.0106314144296" y="1427.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-47.42857142857156" y="-15.5" />
-              <point x="4358.997403599779" y="865.0" />
-              <point x="4111.283931488403" y="865.0" />
-              <point x="4111.283931488403" y="454.0" />
-              <point x="3446.2924632344348" y="454.0" />
-              <point x="44.88888888888869" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-23.0" y="-15.5" />
-              <point x="4199.925975028351" y="895.0" />
-              <point x="4122.283931488403" y="895.0" />
-              <point x="4122.283931488403" y="444.0" />
-              <point x="3573.5702410122126" y="444.0" />
-              <point x="40.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.code.findbugs:jsr305:jar:1.3.9">
-              <point x="-8.625" y="-15.5" />
-              <point x="4259.07110049915" y="273.0" />
-              <point x="4297.092641695017" y="273.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="51.25" y="-15.5" />
-              <point x="787.4792771908797" y="1286.0" />
-              <point x="1025.3887569832386" y="1286.0" />
-              <point x="1025.3887569832386" y="132.0" />
-              <point x="630.0042771908793" y="132.0" />
-              <point x="45.899999999999636" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="-59.57142857142844" y="-15.5" />
-              <point x="3014.614908605309" y="1155.0" />
-              <point x="2972.1863371767377" y="1155.0" />
-              <point x="2972.1863371767377" y="253.0" />
-              <point x="3768.4086004991495" y="253.0" />
-              <point x="-29.050000000000182" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-oxm:jar:4.3.12.RELEASE">
-              <point x="-43.64473684210543" y="-15.5" />
-              <point x="1979.6158945723244" y="1507.0" />
-              <point x="318.75" y="1507.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="-69.0" y="-15.5" />
-              <point x="4153.925975028351" y="915.0" />
-              <point x="3942.0584488747472" y="915.0" />
-              <point x="53.4375" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="22.71428571428578" y="-15.5" />
-              <point x="3568.8831178854934" y="1025.0" />
-              <point x="3541.4363371767377" y="1025.0" />
-              <point x="3541.4363371767377" y="684.0" />
-              <point x="3931.408931488403" y="684.0" />
-              <point x="-24.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="-19.42857142857156" y="-15.5" />
-              <point x="3726.2923774461756" y="945.0" />
-              <point x="3662.470948874747" y="945.0" />
-              <point x="3662.470948874747" y="654.0" />
-              <point x="3657.403574345546" y="654.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-web:jar:4.3.12.RELEASE">
-              <point x="-30.75" y="-15.5" />
-              <point x="705.4792771908797" y="1276.0" />
-              <point x="647.125" y="1276.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1">
-              <point x="20.17857142857156" y="-15.5" />
-              <point x="3682.1495203033187" y="1246.0" />
-              <point x="4006.6209488747472" y="1246.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="14.75" y="-15.5" />
-              <point x="795.4777366775879" y="764.0" />
-              <point x="786.2277366775879" y="764.0" />
-              <point x="786.2277366775879" y="152.0" />
-              <point x="609.6042771908797" y="152.0" />
-              <point x="25.5" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-tx:jar:4.3.12.RELEASE">
-              <point x="-40.82894736842081" y="-15.5" />
-              <point x="1982.431684046009" y="1497.0" />
-              <point x="410.75" y="1497.0" />
-              <point x="-21.5" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="23.71428571428578" y="-15.5" />
-              <point x="4430.140260742636" y="835.0" />
-              <point x="4383.620948874747" y="835.0" />
-              <point x="4383.620948874747" y="394.0" />
-              <point x="3991.408931488403" y="394.0" />
-              <point x="36.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.aspectj:aspectjweaver:jar:1.7.3">
-              <point x="23.934210526315837" y="-15.5" />
-              <point x="2047.1948419407456" y="1437.0" />
-              <point x="3307.167377446176" y="1437.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-aspects:jar:4.3.12.RELEASE">
-              <point x="49.276315789473756" y="-15.5" />
-              <point x="2072.5369472039038" y="1527.0" />
-              <point x="4778.470948874747" y="1527.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-24.71428571428578" y="-15.5" />
-              <point x="3257.3871719277213" y="1005.0" />
-              <point x="3148.582059985858" y="1005.0" />
-              <point x="3148.582059985858" y="604.0" />
-              <point x="3505.7924632344348" y="604.0" />
-              <point x="-27.111111111111313" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-jdbc:jar:4.3.12.RELEASE">
-              <point x="-38.01315789473665" y="-15.5" />
-              <point x="1985.2474735196931" y="1487.0" />
-              <point x="485.75" y="1487.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.44">
-              <point x="35.19736842105249" y="-15.5" />
-              <point x="2058.457999835482" y="1477.0" />
-              <point x="4087.970948874747" y="1477.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="0.0" y="-15.5" />
-              <point x="3745.720948874747" y="293.0" />
-              <point x="3801.60860049915" y="293.0" />
-              <point x="4.150000000000091" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="49.42857142857156" y="-15.5" />
-              <point x="3331.530029070578" y="1045.0" />
-              <point x="3552.4363371767377" y="1045.0" />
-              <point x="3552.4363371767377" y="724.0" />
-              <point x="4244.69610049915" y="724.0" />
-              <point x="-23.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1">
-              <point x="-28.25" y="-15.5" />
-              <point x="3633.720948874747" y="1256.0" />
-              <point x="3074.1863371767377" y="1256.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-expression:jar:4.3.12.RELEASE">
-              <point x="44.25" y="-15.5" />
-              <point x="824.9777366775879" y="764.0" />
-              <point x="910.6387569832386" y="764.0" />
-              <point x="-34.75" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/net.bytebuddy:byte-buddy:jar:1.7.5">
-              <point x="-44.39285714285734" y="-15.5" />
-              <point x="3617.57809173189" y="1276.0" />
-              <point x="2961.1863371767377" y="1276.0" />
-              <point x="2961.1863371767377" y="554.0" />
-              <point x="3356.5146854566574" y="554.0" />
-              <point x="-44.88888888888869" y="15.5" />
-            </edge>
-            <edge source="commons-configuration:commons-configuration:jar:1.10" target="commons-lang:commons-lang:jar:2.6">
-              <point x="-43.25" y="-15.5" />
-              <point x="30.25" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-tx:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="21.5" y="-15.5" />
-              <point x="453.75" y="283.0" />
-              <point x="547.0134509633026" y="283.0" />
-              <point x="-31.714285714285325" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-context:jar:4.3.12.RELEASE">
-              <point x="10.25" y="-15.5" />
-              <point x="746.4792771908797" y="1266.0" />
-              <point x="810.2277366775879" y="1266.0" />
-              <point x="29.5" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-oxm:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="25.25" y="-15.5" />
-              <point x="344.0" y="273.0" />
-              <point x="531.1563081061595" y="273.0" />
-              <point x="-47.57142857142844" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-ie-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="39.71428571428578" y="-15.5" />
-              <point x="3113.9006228910234" y="1045.0" />
-              <point x="3318.4257518796985" y="1045.0" />
-              <point x="3318.4257518796985" y="714.0" />
-              <point x="4237.029433832483" y="714.0" />
-              <point x="-30.666666666666515" y="15.5" />
-            </edge>
-            <edge source="commons-dbcp:commons-dbcp:jar:1.4" target="commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="-74.14285714285734" y="-15.5" />
-              <point x="3207.9586004991497" y="1025.0" />
-              <point x="3015.3718283138" y="1025.0" />
-              <point x="3015.3718283138" y="263.0" />
-              <point x="3776.7086004991497" y="263.0" />
-              <point x="-20.75" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="-71.14285714285734" y="-15.5" />
-              <point x="4335.283117885493" y="875.0" />
-              <point x="3963.4334488747472" y="875.0" />
-              <point x="74.8125" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1">
-              <point x="4.035714285714221" y="-15.5" />
-              <point x="3666.0066631604614" y="1226.0" />
-              <point x="3745.720948874747" y="1226.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-support:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="58.28571428571422" y="-15.5" />
-              <point x="3804.0066631604614" y="1095.0" />
-              <point x="4055.1209488747472" y="1095.0" />
-              <point x="4055.1209488747472" y="754.0" />
-              <point x="4267.69610049915" y="754.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="14.25" y="-15.5" />
-              <point x="3902.8709488747472" y="504.0" />
-              <point x="3828.783931488403" y="504.0" />
-              <point x="3828.783931488403" y="293.0" />
-              <point x="3809.9086004991495" y="293.0" />
-              <point x="12.449999999999818" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="70.28571428571422" y="-15.5" />
-              <point x="4076.906663160461" y="1125.0" />
-              <point x="4264.370948874747" y="1125.0" />
-              <point x="4264.370948874747" y="764.0" />
-              <point x="4275.362767165816" y="764.0" />
-              <point x="7.666666666666515" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-safari-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="0.0" y="-15.5" />
-              <point x="4222.925975028351" y="885.0" />
-              <point x="4189.120948874747" y="885.0" />
-              <point x="4189.120948874747" y="434.0" />
-              <point x="3686.403574345546" y="434.0" />
-              <point x="29.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpclient:jar:4.5.3">
-              <point x="-12.107142857142662" y="-15.5" />
-              <point x="3649.8638060176045" y="1236.0" />
-              <point x="3379.1014576420066" y="1236.0" />
-              <point x="3379.1014576420066" y="644.0" />
-              <point x="3638.0702410122126" y="644.0" />
-              <point x="-19.333333333333485" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1">
-              <point x="68.14285714285734" y="-15.5" />
-              <point x="3614.311689314065" y="1075.0" />
-              <point x="3856.5584488747472" y="1075.0" />
-              <point x="-32.0625" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-edge-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-22.71428571428578" y="-15.5" />
-              <point x="3523.454546456922" y="975.0" />
-              <point x="3421.7828947368416" y="975.0" />
-              <point x="3421.7828947368416" y="614.0" />
-              <point x="3519.3480187899904" y="614.0" />
-              <point x="-13.555555555555657" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/com.google.j2objc:j2objc-annotations:jar:1.1">
-              <point x="-25.875" y="-15.5" />
-              <point x="4241.82110049915" y="273.0" />
-              <point x="4032.69610049915" y="273.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0/org.codehaus.mojo:animal-sniffer-annotations:jar:1.14">
-              <point x="25.875" y="-15.5" />
-              <point x="4293.57110049915" y="293.0" />
-              <point x="4641.592641695017" y="293.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-chrome-driver:jar:3.8.1">
-              <point x="-20.17857142857156" y="-15.5" />
-              <point x="3641.7923774461756" y="1246.0" />
-              <point x="3282.1014576420066" y="1246.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-jdbc:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-beans:jar:4.3.12.RELEASE">
-              <point x="33.66666666666697" y="-15.5" />
-              <point x="519.416666666667" y="764.0" />
-              <point x="521.1785714285716" y="764.0" />
-              <point x="521.1785714285716" y="293.0" />
-              <point x="562.8705938204448" y="293.0" />
-              <point x="-15.857142857143117" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="com.github.pagehelper:pagehelper:jar:5.1.2">
-              <point x="12.671052631578732" y="-15.5" />
-              <point x="2035.9316840460085" y="1397.0" />
-              <point x="2594.5106314144296" y="1397.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.httpcomponents:httpcore:jar:4.4.6">
-              <point x="46.85714285714289" y="-15.5" />
-              <point x="4053.47809173189" y="1115.0" />
-              <point x="4100.283931488403" y="1115.0" />
-              <point x="4100.283931488403" y="283.0" />
-              <point x="3818.2086004991497" y="283.0" />
-              <point x="20.75" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="commons-codec:commons-codec:jar:1.10">
-              <point x="9.85526315789457" y="-15.5" />
-              <point x="2033.1158945723244" y="1387.0" />
-              <point x="2458.5106314144296" y="1387.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-remote-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/com.google.guava:guava:jar:23.0">
-              <point x="71.25" y="-15.5" />
-              <point x="3959.8709488747472" y="744.0" />
-              <point x="4260.029433832483" y="744.0" />
-              <point x="-7.666666666666515" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="ch.qos.logback:logback-core:jar:1.2.3">
-              <point x="-18.302631578947512" y="-15.5" />
-              <point x="2004.9579998354823" y="1417.0" />
-              <point x="1412.2292771908797" y="1417.0" />
-              <point x="1412.2292771908797" y="1286.0" />
-              <point x="1404.8542771908797" y="1286.0" />
-              <point x="-28.0" y="15.5" />
-            </edge>
-            <edge source="edu.scu.qz:apec-service:1.0-SNAPSHOT" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE">
-              <point x="-32.381578947368325" y="-15.5" />
-              <point x="1990.8790524670615" y="1467.0" />
-              <point x="736.2292771908797" y="1467.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-opera-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-api:jar:3.8.1">
-              <point x="23.42857142857133" y="-15.5" />
-              <point x="4030.0495203033183" y="1105.0" />
-              <point x="4069.9666943195944" y="1105.0" />
-              <point x="4069.9666943195944" y="464.0" />
-              <point x="3967.408931488403" y="464.0" />
-              <point x="12.0" y="15.5" />
-            </edge>
-            <edge source="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-expression:jar:4.3.12.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.12.RELEASE/org.springframework:spring-core:jar:4.3.12.RELEASE">
-              <point x="0.0" y="-15.5" />
-              <point x="945.3887569832386" y="142.0" />
-              <point x="619.8042771908795" y="142.0" />
-              <point x="35.69999999999982" y="15.5" />
-            </edge>
-            <edge source="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.seleniumhq.selenium:selenium-firefox-driver:jar:3.8.1" target="org.seleniumhq.selenium:selenium-java:jar:3.8.1/org.apache.commons:commons-exec:jar:1.3">
-              <point x="-23.71428571428578" y="-15.5" />
-              <point x="4382.711689314065" y="855.0" />
-              <point x="4299.141074345546" y="855.0" />
-              <point x="4299.141074345546" y="414.0" />
-              <point x="3587.1257965677682" y="414.0" />
-              <point x="54.22222222222217" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="1554.0" y="68.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/portal/customer/user/RegisterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IUserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/portal/customer/user/LoginTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShippingMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="76">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IProductMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IPayInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICartMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="291" column="3" lean-forward="true" selection-start-line="291" selection-start-column="3" selection-end-line="291" selection-end-column="3" />
+          <folding>
+            <element signature="e#8720#8721#0" expanded="false" />
+            <element signature="e#8768#8769#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5510">
-          <caret line="290" column="29" lean-forward="false" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="29" />
+        <state relative-caret-position="114">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/ICategoryService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="93" column="32" lean-forward="false" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+        <state relative-caret-position="247">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/OrderController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="146" column="29" lean-forward="false" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
+        <state relative-caret-position="437">
+          <caret line="117" column="19" lean-forward="false" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/common/ServerResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/CartVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CartController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/CartProductVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="98" column="27" lean-forward="true" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+        <state relative-caret-position="95">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/common/ResponseCode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ShopOrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shipping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="443">
+          <caret line="232" column="25" lean-forward="false" selection-start-line="232" selection-start-column="25" selection-end-line="232" selection-end-column="25" />
           <folding>
-            <element signature="e#1261#1262#0" expanded="false" />
-            <element signature="e#1284#1285#0" expanded="false" />
-            <element signature="e#1314#1315#0" expanded="false" />
-            <element signature="e#1339#1340#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
-            <element signature="e#1438#1439#0" expanded="false" />
-            <element signature="e#1467#1468#0" expanded="false" />
-            <element signature="e#1512#1513#0" expanded="false" />
-            <element signature="e#1548#1549#0" expanded="false" />
-            <element signature="e#1587#1588#0" expanded="false" />
-            <element signature="e#1622#1623#0" expanded="false" />
-            <element signature="e#1803#1804#0" expanded="false" />
-            <element signature="e#1839#1840#0" expanded="false" />
-            <element signature="e#2026#2027#0" expanded="false" />
-            <element signature="e#2063#2064#0" expanded="false" />
-            <element signature="e#2257#2258#0" expanded="false" />
-            <element signature="e#2296#2297#0" expanded="false" />
-            <element signature="e#2496#2497#0" expanded="false" />
-            <element signature="e#2531#2532#0" expanded="false" />
-            <element signature="e#2715#2716#0" expanded="false" />
-            <element signature="e#2754#2755#0" expanded="false" />
-            <element signature="e#2957#2958#0" expanded="false" />
-            <element signature="e#2995#2996#0" expanded="false" />
-            <element signature="e#3189#3190#0" expanded="false" />
-            <element signature="e#3223#3224#0" expanded="false" />
+            <marker date="1523175778506" expanded="true" signature="2018:2129" ph="select from apec_shop_order" />
+            <marker date="1523175778506" expanded="true" signature="2215:2280" ph="delete from apec_shop_order... " />
+            <marker date="1523175778506" expanded="true" signature="2366:3124" ph="insert into apec_shop_order... " />
+            <marker date="1523175778506" expanded="true" signature="6006:7635" ph="update apec_shop_order... " />
+            <marker date="1523175778506" expanded="true" signature="7733:8553" ph="update apec_shop_order... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        <state relative-caret-position="215">
+          <caret line="62" column="87" lean-forward="false" selection-start-line="62" selection-start-column="87" selection-end-line="62" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/ICartMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <marker date="1523170916392" expanded="true" signature="1146:1283" ph="SELECT FROM apec_cart" />
+            <marker date="1523170916392" expanded="true" signature="1389:1496" ph="SELECT FROM apec_cart" />
+            <marker date="1523170916392" expanded="true" signature="1625:1697" ph="SELECT COUNT... apec_cart" />
+            <marker date="1523170916392" expanded="true" signature="1810:1881" ph="SELECT IFNUL... apec_cart" />
+            <marker date="1523170916392" expanded="true" signature="1994:2117" ph="SELECT FROM apec_cart" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <marker date="1523175462475" expanded="true" signature="1142:1257" ph="select from apec_cart" />
+            <marker date="1523175462475" expanded="true" signature="1347:1406" ph="delete from apec_cart... " />
+            <marker date="1523175462475" expanded="true" signature="1489:1776" ph="insert into apec_cart... " />
+            <marker date="1523175462475" expanded="true" signature="3424:4180" ph="update apec_cart... " />
+            <marker date="1523175462475" expanded="true" signature="4277:4599" ph="update apec_cart... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <marker date="1523175494955" expanded="true" signature="1167:1276" ph="select from apec_category" />
+            <marker date="1523175494955" expanded="true" signature="1362:1425" ph="delete from apec_category... " />
+            <marker date="1523175494955" expanded="true" signature="1510:1826" ph="insert into apec_category... " />
+            <marker date="1523175494955" expanded="true" signature="3298:4014" ph="update apec_category... " />
+            <marker date="1523175494955" expanded="true" signature="4111:4468" ph="update apec_category... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/ICategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <marker date="1523175930679" expanded="true" signature="1244:1359" ph="SELECT FROM apec_category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="40" column="77" lean-forward="false" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="77" />
+          <folding>
+            <marker date="1523176080619" expanded="true" signature="1677:1824" ph="SELECT FROM apec_order_item" />
+            <marker date="1523176080619" expanded="true" signature="1925:2040" ph="SELECT FROM apec_order_item" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <marker date="1523175529355" expanded="true" signature="1602:1713" ph="select from apec_order_item" />
+            <marker date="1523175529355" expanded="true" signature="1799:1864" ph="delete from apec_order_item... " />
+            <marker date="1523175529355" expanded="true" signature="1950:2516" ph="insert into apec_order_item... " />
+            <marker date="1523175529355" expanded="true" signature="4702:5889" ph="update apec_order_item... " />
+            <marker date="1523175529355" expanded="true" signature="5987:6594" ph="update apec_order_item... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <marker date="1523175559802" expanded="true" signature="1290:1396" ph="select from apec_order" />
+            <marker date="1523175559802" expanded="true" signature="1482:1542" ph="delete from apec_order... " />
+            <marker date="1523175559802" expanded="true" signature="1624:2023" ph="insert into apec_order... " />
+            <marker date="1523175559802" expanded="true" signature="3692:4545" ph="update apec_order... " />
+            <marker date="1523175559802" expanded="true" signature="4639:5072" ph="update apec_order... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <marker date="1523176080545" expanded="true" signature="1364:1498" ph="SELECT FROM apec_order" />
+            <marker date="1523176080545" expanded="true" signature="1602:1712" ph="SELECT FROM apec_order" />
+            <marker date="1523176080545" expanded="true" signature="1814:1956" ph="SELECT FROM apec_order" />
+            <marker date="1523176080545" expanded="true" signature="2038:2146" ph="SELECT FROM apec_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/PayInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <marker date="1523175590649" expanded="true" signature="1216:1325" ph="select from apec_pay_info" />
+            <marker date="1523175590649" expanded="true" signature="1411:1474" ph="delete from apec_pay_info... " />
+            <marker date="1523175590649" expanded="true" signature="1558:1920" ph="insert into apec_pay_info... " />
+            <marker date="1523175590649" expanded="true" signature="3476:4258" ph="update apec_pay_info... " />
+            <marker date="1523175590649" expanded="true" signature="4354:4757" ph="update apec_pay_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IPayInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <marker date="1523175630997" expanded="true" signature="1801:1919" ph="select from apec_product" />
+            <marker date="1523175630997" expanded="true" signature="2009:2071" ph="delete from apec_product... " />
+            <marker date="1523175630997" expanded="true" signature="2157:2739" ph="insert into apec_product... " />
+            <marker date="1523175630997" expanded="true" signature="5689:7247" ph="update apec_product... " />
+            <marker date="1523175630997" expanded="true" signature="7347:7984" ph="update apec_product... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <marker date="1523176128268" expanded="true" signature="1767:1868" ph="SELECT FROM apec_product" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="163" column="35" lean-forward="false" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
+          <folding>
+            <marker date="1523176185765" expanded="true" signature="1726:1845" ph="select from apec_shipping" />
+            <marker date="1523176185765" expanded="true" signature="1935:1998" ph="delete from apec_shipping... " />
+            <marker date="1523176185765" expanded="true" signature="2085:2702" ph="insert into apec_shipping... " />
+            <marker date="1523176185765" expanded="true" signature="5553:7076" ph="update apec_shipping... " />
+            <marker date="1523176185765" expanded="true" signature="7177:7862" ph="update apec_shipping... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IShippingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="47" column="61" lean-forward="true" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+          <folding>
+            <marker date="1523170916836" expanded="true" signature="1727:1861" ph="SELECT FROM apec_shipping" />
+            <marker date="1523170916836" expanded="true" signature="1963:2074" ph="SELECT FROM apec_shipping" />
+            <marker date="1523170916836" expanded="true" signature="2156:2251" ph="delete from apec_shipping... " />
+            <marker date="1523170916836" expanded="true" signature="2303:2958" ph="update apec_shipping... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <marker date="1523175889005" expanded="true" signature="2016:2131" ph="select from apec_shop" />
+            <marker date="1523175889005" expanded="true" signature="2221:2280" ph="delete from apec_shop... " />
+            <marker date="1523175889005" expanded="true" signature="2363:3113" ph="insert into apec_shop... " />
+            <marker date="1523175889005" expanded="true" signature="6471:8314" ph="update apec_shop... " />
+            <marker date="1523175889005" expanded="true" signature="8411:9209" ph="update apec_shop... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1523176331902" expanded="true" signature="2009:2084" ph="SELECT COUNT... apec_shop" />
+            <marker date="1523176331902" expanded="true" signature="2184:2246" ph="SELECT COUNT... apec_shop" />
+            <marker date="1523176331902" expanded="true" signature="2343:2398" ph="SELECT * FRO... apec_shop" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <marker date="1523170915459" expanded="true" signature="1372:1437" ph="SELECT count... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="1536:1669" ph="SELECT FROM apec_user" />
+            <marker date="1523170915459" expanded="true" signature="1752:1811" ph="SELECT COUNT... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="1907:1972" ph="SELECT quest... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="2076:2187" ph="SELECT COUNT... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="2293:2375" ph="SELECT COUNT... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="2486:2563" ph="SELECT count... apec_user" />
+            <marker date="1523170915459" expanded="true" signature="2649:2761" ph="UPDATE apec_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <marker date="1523175809533" expanded="true" signature="1397:1512" ph="select from apec_user" />
+            <marker date="1523175809533" expanded="true" signature="1602:1661" ph="delete from apec_user... " />
+            <marker date="1523175809533" expanded="true" signature="1744:2143" ph="insert into apec_user... " />
+            <marker date="1523175809533" expanded="true" signature="4319:5405" ph="update apec_user... " />
+            <marker date="1523175809533" expanded="true" signature="5502:5943" ph="update apec_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6913">
-          <caret line="407" column="52" lean-forward="false" selection-start-line="407" selection-start-column="52" selection-end-line="407" selection-end-column="52" />
+        <state relative-caret-position="-3585">
+          <caret line="226" column="0" lean-forward="true" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
           <folding>
             <element signature="method#assembleShippingVo#0;class#OrderServiceImpl#0" expanded="false" />
             <element signature="method#dumpResponse#0;class#OrderServiceImpl#0" expanded="false" />
@@ -2232,270 +1449,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/ShippingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/PayInfoMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderItemVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShippingServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderProductVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="76">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ProductMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CustormerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="170" column="16" lean-forward="false" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
-          <folding>
-            <marker date="1521176493325" expanded="true" signature="1397:1512" ph="select from apec_user" />
-            <marker date="1521176493325" expanded="true" signature="1598:1663" ph="SELECT count... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="1762:1895" ph="SELECT FROM apec_user" />
-            <marker date="1521176493325" expanded="true" signature="1978:2037" ph="SELECT COUNT... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="2133:2198" ph="SELECT quest... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="2302:2413" ph="SELECT COUNT... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="2519:2601" ph="SELECT COUNT... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="2712:2789" ph="SELECT count... apec_user" />
-            <marker date="1521176493325" expanded="true" signature="2880:2939" ph="delete from apec_user... " />
-            <marker date="1521176493325" expanded="true" signature="3022:3415" ph="insert into apec_user... " />
-            <marker date="1521176493325" expanded="true" signature="5633:6719" ph="update apec_user... " />
-            <marker date="1521176493325" expanded="true" signature="6816:7257" ph="update apec_user... " />
-            <marker date="1521176493325" expanded="true" signature="7341:7453" ph="UPDATE apec_user... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="219" column="49" lean-forward="true" selection-start-line="219" selection-start-column="49" selection-end-line="219" selection-end-column="49" />
-          <folding>
-            <marker date="1522075254034" expanded="true" signature="1827:1943" ph="select from apec_order" />
-            <marker date="1522075254034" expanded="true" signature="2055:2189" ph="SELECT FROM apec_order" />
-            <marker date="1522075254034" expanded="true" signature="2293:2403" ph="SELECT FROM apec_order" />
-            <marker date="1522075254034" expanded="true" signature="2505:2647" ph="SELECT FROM apec_order" />
-            <marker date="1522075254034" expanded="true" signature="2729:2837" ph="SELECT FROM apec_order" />
-            <marker date="1522075254034" expanded="true" signature="2928:2988" ph="delete from apec_order... " />
-            <marker date="1522075254034" expanded="true" signature="3072:3688" ph="insert into apec_order... " />
-            <marker date="1522075254034" expanded="true" signature="6736:8341" ph="update apec_order... " />
-            <marker date="1522075254034" expanded="true" signature="8439:9110" ph="update apec_order... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2071">
-          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/UserManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <marker date="1523084144875" expanded="true" signature="1920:2035" ph="select from apec_shop" />
-            <marker date="1523084144875" expanded="true" signature="2126:2201" ph="SELECT COUNT... apec_shop" />
-            <marker date="1523084144875" expanded="true" signature="2301:2363" ph="SELECT COUNT... apec_shop" />
-            <marker date="1523084144875" expanded="true" signature="2460:2515" ph="SELECT * FRO... apec_shop" />
-            <marker date="1523084144875" expanded="true" signature="2608:2667" ph="delete from apec_shop... " />
-            <marker date="1523084144875" expanded="true" signature="2750:3448" ph="insert into apec_shop... " />
-            <marker date="1523084144875" expanded="true" signature="6620:8350" ph="update apec_shop... " />
-            <marker date="1523084144875" expanded="true" signature="8447:9200" ph="update apec_shop... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/ShopMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="147" column="24" lean-forward="true" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
-          <folding>
-            <element signature="e#4011#4012#0" expanded="false" />
-            <element signature="e#4046#4047#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="221" column="31" lean-forward="false" selection-start-line="221" selection-start-column="31" selection-end-line="221" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/apec.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        <state relative-caret-position="608">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>

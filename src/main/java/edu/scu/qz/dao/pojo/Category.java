@@ -1,7 +1,6 @@
 package edu.scu.qz.dao.pojo;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class Category {
     private Integer id;
@@ -9,6 +8,8 @@ public class Category {
     private Integer parentId;
 
     private String name;
+
+    private String image;
 
     private Boolean status;
 
@@ -18,10 +19,11 @@ public class Category {
 
     private Date updateTime;
 
-    public Category(Integer id, Integer parentId, String name, Boolean status, Integer sortOrder, Date createTime, Date updateTime) {
+    public Category(Integer id, Integer parentId, String name, String image, Boolean status, Integer sortOrder, Date createTime, Date updateTime) {
         this.id = id;
         this.parentId = parentId;
         this.name = name;
+        this.image = image;
         this.status = status;
         this.sortOrder = sortOrder;
         this.createTime = createTime;
@@ -56,6 +58,14 @@ public class Category {
         this.name = name == null ? null : name.trim();
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+
     public Boolean getStatus() {
         return status;
     }
@@ -86,18 +96,5 @@ public class Category {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Category category = (Category) o;
-        return Objects.equals(id, category.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scu.qz.dao.idao.inherit.ICartMapper">
+    <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Cart">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="product_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="quantity" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="checked" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, user_id, product_id, quantity, checked, create_time, update_time
+  </sql>
+    <select id="selectCartByUserIdProductId" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_cart
+        WHERE user_id = #{userId} AND product_id = #{productId}
+    </select>
+    <select id="selectCartByUserId" resultMap="BaseResultMap" parameterType="int">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_cart
+        WHERE user_id = #{userId}
+    </select>
+    <select id="selectCartProductCheckedStatusByUserId" resultType="java.lang.Integer" parameterType="int">
+      SELECT COUNT(1) FROM apec_cart WHERE checked = 0 AND user_id = #{userId}
+    </select>
+    <select id="selectCartProductCount" resultType="java.lang.Integer" parameterType="int">
+      SELECT IFNULL(SUM(quantity),0) FROM apec_cart WHERE user_id = #{userId}
+    </select>
+    <select id="selectCheckedCartByUserId" resultMap="BaseResultMap" parameterType="int">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_cart
+        WHERE checked = 1 AND user_id = #{userId}
+    </select>
+
+    <delete id="deleteByUserIdProductIds" parameterType="map">
+        DELETE FROM apec_cart
+        WHERE user_id = #{userId}
+        <if test="productIdList != null">
+            and product_id in
+            <foreach collection="productIdList" close=")" open="(" index="index" separator="," item="item">
+                #{item}
+            </foreach>
+        </if>
+    </delete>
+
+    <update id="checkedOrUncheckedProduct" parameterType="map">
+        UPDATE apec_cart
+        SET checked = #{checked}, update_time = now()
+        WHERE user_id = #{userId}
+        <if test="productId != null">
+            and product_id = #{productId}
+        </if>
+    </update>
+</mapper>

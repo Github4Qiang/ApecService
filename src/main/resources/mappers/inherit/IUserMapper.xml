@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scu.qz.dao.idao.inherit.IUserMapper">
+    <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.User">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="question" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="answer" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="role" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, username, password, email, phone, question, answer, role, create_time, update_time
+  </sql>
+    <select id="checkUsername" resultType="java.lang.Integer">
+        SELECT count(1) FROM apec_user
+        WHERE username=#{username}
+    </select>
+    <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_user
+        WHERE username=#{username} AND password=#{password}
+    </select>
+    <select id="checkEmail" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM apec_user
+        WHERE email=#{email}
+    </select>
+    <select id="selectQuestionByUsername" resultType="java.lang.String">
+        SELECT question FROM apec_user
+        WHERE username=#{username}
+    </select>
+    <select id="checkAnswer" resultType="java.lang.Integer" parameterType="map">
+        SELECT COUNT(1) FROM apec_user
+        WHERE username=#{username} AND question=#{question} AND answer=#{answer}
+    </select>
+    <select id="checkPassword" resultType="java.lang.Integer" parameterType="map">
+        SELECT COUNT(1) FROM apec_user
+        WHERE id=#{userId} AND password=#{password}
+    </select>
+    <select id="checkEmailByUserId" resultType="java.lang.Integer" parameterType="map">
+        SELECT count(1) FROM apec_user
+        WHERE email=#{email} AND id!=#{userId}
+    </select>
+    <update id="updatePasswordByUsername" parameterType="map">
+        UPDATE apec_user
+        SET password = #{passwordNew}, update_time = now()
+        WHERE username = #{username}
+    </update>
+</mapper>

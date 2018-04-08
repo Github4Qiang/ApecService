@@ -5,6 +5,8 @@ import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.common.TokenCache;
 import edu.scu.qz.dao.idao.ShopMapper;
 import edu.scu.qz.dao.idao.UserMapper;
+import edu.scu.qz.dao.idao.inherit.IShopMapper;
+import edu.scu.qz.dao.idao.inherit.IUserMapper;
 import edu.scu.qz.dao.pojo.Shop;
 import edu.scu.qz.dao.pojo.User;
 import edu.scu.qz.service.IUserService;
@@ -19,9 +21,9 @@ import java.util.UUID;
 public class UserServiceImpl implements IUserService {
 
     @Autowired
-    private UserMapper userMapper;
+    private IUserMapper userMapper;
     @Autowired
-    private ShopMapper shopMapper;
+    private IShopMapper shopMapper;
 
     @Override
     public ServerResponse<User> login(String username, String password) {

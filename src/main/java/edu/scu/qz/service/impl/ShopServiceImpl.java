@@ -3,6 +3,7 @@ package edu.scu.qz.service.impl;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.ShopMapper;
+import edu.scu.qz.dao.idao.inherit.IShopMapper;
 import edu.scu.qz.dao.pojo.Shop;
 import edu.scu.qz.service.IShopService;
 import edu.scu.qz.service.IUserService;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class ShopServiceImpl implements IShopService {
 
     @Autowired
-    private ShopMapper shopMapper;
+    private IShopMapper shopMapper;
     @Autowired
     private IUserService iUserService;
 

@@ -8,9 +8,13 @@ public class Product {
 
     private Integer categoryId;
 
+    private Integer shopId;
+
     private String name;
 
     private String subtitle;
+
+    private String shopName;
 
     private String mainImage;
 
@@ -28,11 +32,13 @@ public class Product {
 
     private Date updateTime;
 
-    public Product(Integer id, Integer categoryId, String name, String subtitle, String mainImage, String subImages, String detail, BigDecimal price, Integer stock, Integer status, Date createTime, Date updateTime) {
+    public Product(Integer id, Integer categoryId, Integer shopId, String name, String subtitle, String shopName, String mainImage, String subImages, String detail, BigDecimal price, Integer stock, Integer status, Date createTime, Date updateTime) {
         this.id = id;
         this.categoryId = categoryId;
+        this.shopId = shopId;
         this.name = name;
         this.subtitle = subtitle;
+        this.shopName = shopName;
         this.mainImage = mainImage;
         this.subImages = subImages;
         this.detail = detail;
@@ -63,6 +69,14 @@ public class Product {
         this.categoryId = categoryId;
     }
 
+    public Integer getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(Integer shopId) {
+        this.shopId = shopId;
+    }
+
     public String getName() {
         return name;
     }
@@ -77,6 +91,14 @@ public class Product {
 
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle == null ? null : subtitle.trim();
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName == null ? null : shopName.trim();
     }
 
     public String getMainImage() {

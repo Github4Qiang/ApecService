@@ -3,7 +3,7 @@ package edu.scu.qz.service.impl;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import edu.scu.qz.common.ServerResponse;
-import edu.scu.qz.dao.idao.CategoryMapper;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.service.ICategoryService;
 import edu.scu.qz.vo.CategoryVo;
@@ -23,7 +23,7 @@ public class CategoryServiceImpl implements ICategoryService {
     private Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
 
     @Autowired
-    private CategoryMapper categoryMapper;
+    private ICategoryMapper categoryMapper;
 
     @Override
     public ServerResponse addCategory(String categoryName, Integer parentId) {

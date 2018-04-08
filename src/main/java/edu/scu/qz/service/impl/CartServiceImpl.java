@@ -5,7 +5,7 @@ import com.google.common.collect.Lists;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ResponseCode;
 import edu.scu.qz.common.ServerResponse;
-import edu.scu.qz.dao.idao.CartMapper;
+import edu.scu.qz.dao.idao.inherit.ICartMapper;
 import edu.scu.qz.dao.idao.ProductMapper;
 import edu.scu.qz.dao.pojo.Cart;
 import edu.scu.qz.dao.pojo.Product;
@@ -25,7 +25,7 @@ import java.util.List;
 public class CartServiceImpl implements ICartService {
 
     @Autowired
-    private CartMapper cartMapper;
+    private ICartMapper cartMapper;
     @Autowired
     private ProductMapper productMapper;
 

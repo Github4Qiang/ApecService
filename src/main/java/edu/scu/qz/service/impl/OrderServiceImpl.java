@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ServerResponse;
-import edu.scu.qz.dao.idao.*;
+import edu.scu.qz.dao.idao.inherit.*;
 import edu.scu.qz.dao.pojo.*;
 import edu.scu.qz.service.IOrderService;
 import edu.scu.qz.util.BigDecimalUtil;
@@ -45,17 +45,17 @@ public class OrderServiceImpl implements IOrderService {
     private static final Logger logger = LoggerFactory.getLogger(OrderServiceImpl.class);
 
     @Autowired
-    private OrderMapper orderMapper;
+    private IOrderMapper orderMapper;
     @Autowired
-    private OrderItemMapper orderItemMapper;
+    private IOrderItemMapper orderItemMapper;
     @Autowired
-    private PayInfoMapper payInfoMapper;
+    private IPayInfoMapper payInfoMapper;
     @Autowired
-    private CartMapper cartMapper;
+    private ICartMapper cartMapper;
     @Autowired
-    private ProductMapper productMapper;
+    private IProductMapper productMapper;
     @Autowired
-    private ShippingMapper shippingMapper;
+    private IShippingMapper shippingMapper;
 
     @Override
     public ServerResponse pay(Long orderNo, Integer userId, String path) {

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scu.qz.dao.idao.inherit.IShopMapper">
+    <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Shop">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="shop_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="balance" javaType="java.math.BigDecimal" jdbcType="DECIMAL"/>
+            <arg column="shop_status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="shop_status_desc" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="producer_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_province" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_city" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_district" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="producer_address" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="server_phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="bank_card" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, shop_name, balance, shop_status, shop_status_desc, producer_id, producer_name,
+    producer_province, producer_city, producer_district, producer_address, server_phone,
+    bank_card, create_time, update_time
+  </sql>
+
+    <select id="selectByIdUserId" parameterType="map" resultType="java.lang.Integer">
+    SELECT COUNT(1) FROM apec_shop WHERE id=#{id} AND producer_id=#{producerId}
+  </select>
+    <select id="countByUserId" resultType="java.lang.Integer" parameterType="int">
+    SELECT COUNT(1) FROM apec_shop WHERE producer_id=#{producerId};
+  </select>
+    <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
+    SELECT * FROM apec_shop WHERE producer_id=#{producerId};
+    </select>
+
+
+</mapper>

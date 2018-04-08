@@ -10,6 +10,8 @@ public class OrderItem {
 
     private Long orderNo;
 
+    private Long subOrderNo;
+
     private Integer productId;
 
     private String productName;
@@ -26,10 +28,11 @@ public class OrderItem {
 
     private Date updateTime;
 
-    public OrderItem(Integer id, Integer userId, Long orderNo, Integer productId, String productName, String productImage, BigDecimal currentUnitPrice, Integer quantity, BigDecimal totalPrice, Date createTime, Date updateTime) {
+    public OrderItem(Integer id, Integer userId, Long orderNo, Long subOrderNo, Integer productId, String productName, String productImage, BigDecimal currentUnitPrice, Integer quantity, BigDecimal totalPrice, Date createTime, Date updateTime) {
         this.id = id;
         this.userId = userId;
         this.orderNo = orderNo;
+        this.subOrderNo = subOrderNo;
         this.productId = productId;
         this.productName = productName;
         this.productImage = productImage;
@@ -66,6 +69,14 @@ public class OrderItem {
 
     public void setOrderNo(Long orderNo) {
         this.orderNo = orderNo;
+    }
+
+    public Long getSubOrderNo() {
+        return subOrderNo;
+    }
+
+    public void setSubOrderNo(Long subOrderNo) {
+        this.subOrderNo = subOrderNo;
     }
 
     public Integer getProductId() {

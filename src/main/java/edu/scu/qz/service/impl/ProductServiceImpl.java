@@ -8,6 +8,8 @@ import edu.scu.qz.common.ResponseCode;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.CategoryMapper;
 import edu.scu.qz.dao.idao.ProductMapper;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
+import edu.scu.qz.dao.idao.inherit.IProductMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.dao.pojo.Product;
 import edu.scu.qz.service.ICategoryService;
@@ -28,9 +30,9 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private ICategoryService iCategoryService;
     @Autowired
-    private CategoryMapper categoryMapper;
+    private ICategoryMapper categoryMapper;
     @Autowired
-    private ProductMapper productMapper;
+    private IProductMapper productMapper;
 
     @Override
     public ServerResponse saveOrUpdateProduct(Product product) {

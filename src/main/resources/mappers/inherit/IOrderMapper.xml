@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scu.qz.dao.idao.inherit.IOrderMapper">
+    <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Order">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="order_no" javaType="java.lang.Long" jdbcType="BIGINT" />
+            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="shipping_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="payment" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
+            <arg column="payment_type" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="payment_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, order_no, user_id, shipping_id, payment, payment_type, payment_time, create_time,
+    update_time
+  </sql>
+    <select id="selectByUserIdAndOrderNo" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order
+        WHERE order_no = #{orderNo} AND user_id = #{userId}
+    </select>
+    <select id="selectByOrderNo" resultMap="BaseResultMap" parameterType="long">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order
+        WHERE order_no = #{orderNo}
+    </select>
+    <select id="selectByUserId" parameterType="int" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order
+        WHERE user_id = #{userId}
+        ORDER BY create_time DESC
+    </select>
+    <select id="selectAllOrder" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order
+        ORDER BY create_time DESC
+    </select>
+</mapper>

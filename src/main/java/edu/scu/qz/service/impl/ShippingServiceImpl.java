@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Maps;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.ShippingMapper;
+import edu.scu.qz.dao.idao.inherit.IShippingMapper;
 import edu.scu.qz.dao.pojo.Shipping;
 import edu.scu.qz.service.IShippingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import java.util.Map;
 public class ShippingServiceImpl implements IShippingService {
 
     @Autowired
-    private ShippingMapper shippingMapper;
+    private IShippingMapper shippingMapper;
 
     @Override
     public ServerResponse add(Integer userId, Shipping shipping) {
