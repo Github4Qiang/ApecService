@@ -6,6 +6,7 @@ import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.service.ICategoryService;
+import edu.scu.qz.util.PropertiesUtil;
 import edu.scu.qz.vo.CategoryVo;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -25,6 +26,7 @@ public class CategoryServiceImpl implements ICategoryService {
     @Autowired
     private ICategoryMapper categoryMapper;
 
+    // todo: 添加品类时要上传图片
     @Override
     public ServerResponse addCategory(String categoryName, Integer parentId) {
         if (parentId == null || StringUtils.isBlank(categoryName)) {
@@ -62,11 +64,16 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public ServerResponse getChidrenParallelCategory(Integer categoryId) {
+        List<CategoryVo> categoryVoList = Lists.newArrayList();
         List<Category> categoryList = categoryMapper.selectCategoryChildrenByParentId(categoryId);
         if (CollectionUtils.isEmpty(categoryList)) {
             logger.info("未找到当前分类的子分类：" + categoryId);
         }
-        return ServerResponse.createBySuccess(categoryList);
+        for (Category category : categoryList) {
+            CategoryVo categoryVo = assembleCategoryVo(category);
+            categoryVoList.add(categoryVo);
+        }
+        return ServerResponse.createBySuccess(categoryVoList);
     }
 
 
@@ -110,6 +117,8 @@ public class CategoryServiceImpl implements ICategoryService {
         categoryVo.setId(category.getId());
         categoryVo.setParentId(category.getParentId());
         categoryVo.setName(category.getName());
+        categoryVo.setImage(category.getImage());
+        categoryVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
         categoryVo.setStatus(category.getStatus());
         categoryVo.setSortOrder(category.getSortOrder());
         categoryVo.setCreateTime(category.getCreateTime());

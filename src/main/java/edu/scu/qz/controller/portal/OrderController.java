@@ -85,6 +85,7 @@ public class OrderController {
         return Const.AlipayCallback.RESPONSE_FAILED;
     }
 
+    // 仅仅用作判断总订单是否被支付
     // 订单已支付：data=true
     // 订单未支付：data=false
     @RequestMapping(value = "query_order_pay_status.do")

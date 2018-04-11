@@ -3,12 +3,15 @@ package edu.scu.qz.vo;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class OrderVo {
+public class OrderShopProductVo {
+
+    private Integer shopId;
+    private String shopName;
 
     private String paymentTypeDesc;
     private String statusDesc;
 
-    private Long orderNo;           // 订单号
+    private Long subOrderNo;        // 子订单号
     private BigDecimal payment;     // 订单金额
     private Integer paymentType;   // 支付类型
     private Integer status;         // 订单状态
@@ -20,29 +23,22 @@ public class OrderVo {
     private String createTime;
 
     // 订单明细
-    private List<OrderShopProductVo> orderShopProductVoList;
+    private List<OrderItemVo> orderItemVoList;
 
-    private String imageHost;
-    private Integer shippingId;
-    private String receiverName;
-
-    // 收货地址
-    private ShippingVo shippingVo;
-
-    public List<OrderShopProductVo> getOrderShopProductVoList() {
-        return orderShopProductVoList;
+    public Integer getShopId() {
+        return shopId;
     }
 
-    public void setOrderShopProductVoList(List<OrderShopProductVo> orderShopProductVoList) {
-        this.orderShopProductVoList = orderShopProductVoList;
+    public void setShopId(Integer shopId) {
+        this.shopId = shopId;
     }
 
-    public String getCreateTime() {
-        return createTime;
+    public String getShopName() {
+        return shopName;
     }
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
     }
 
     public String getPaymentTypeDesc() {
@@ -61,12 +57,12 @@ public class OrderVo {
         this.statusDesc = statusDesc;
     }
 
-    public Long getOrderNo() {
-        return orderNo;
+    public Long getSubOrderNo() {
+        return subOrderNo;
     }
 
-    public void setOrderNo(Long orderNo) {
-        this.orderNo = orderNo;
+    public void setSubOrderNo(Long subOrderNo) {
+        this.subOrderNo = subOrderNo;
     }
 
     public BigDecimal getPayment() {
@@ -125,35 +121,19 @@ public class OrderVo {
         this.closeTime = closeTime;
     }
 
-    public String getImageHost() {
-        return imageHost;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setImageHost(String imageHost) {
-        this.imageHost = imageHost;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 
-    public Integer getShippingId() {
-        return shippingId;
+    public List<OrderItemVo> getOrderItemVoList() {
+        return orderItemVoList;
     }
 
-    public void setShippingId(Integer shippingId) {
-        this.shippingId = shippingId;
-    }
-
-    public String getReceiverName() {
-        return receiverName;
-    }
-
-    public void setReceiverName(String receiverName) {
-        this.receiverName = receiverName;
-    }
-
-    public ShippingVo getShippingVo() {
-        return shippingVo;
-    }
-
-    public void setShippingVo(ShippingVo shippingVo) {
-        this.shippingVo = shippingVo;
+    public void setOrderItemVoList(List<OrderItemVo> orderItemVoList) {
+        this.orderItemVoList = orderItemVoList;
     }
 }

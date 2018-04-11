@@ -3,14 +3,14 @@
 <mapper namespace="edu.scu.qz.dao.idao.inherit.ICategoryMapper">
     <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Category">
         <constructor>
-            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="parent_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <arg column="image" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT" />
-            <arg column="sort_order" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="parent_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="image" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT"/>
+            <arg column="sort_order" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
@@ -21,5 +21,11 @@
         <include refid="Base_Column_List"/>
         FROM apec_category
         WHERE parent_id = #{parentId}
+    </select>
+    <select id="selectByCategoryName" parameterType="string" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_category
+        WHERE name = #{categoryName}
     </select>
 </mapper>

@@ -10,7 +10,11 @@ public interface IOrderItemMapper extends OrderItemMapper {
 
     List<OrderItem> getByUserIdOrderNo(@Param("userId") Integer userId, @Param("orderNo") Long orderNo);
 
-    void batchInsert(@Param("orderItemList") List<OrderItem> orderItemList);
+    void batchInsertOrderItem(@Param("orderItemList") List<OrderItem> orderItemList);
 
     List<OrderItem> getByOrderNo(Long orderNo);
+
+    List<OrderItem> getByUserIdSubOrderNo(@Param("userId") Integer userId, @Param("subOrderNo") Long subOrderNo);
+
+    List<OrderItem> getBySubOrderNo(Long subOrderNo);
 }

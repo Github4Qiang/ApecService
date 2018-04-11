@@ -3,7 +3,7 @@ package edu.scu.qz.vo;
 import java.util.Date;
 import java.util.List;
 
-public class CategoryVo{
+public class CategoryVo {
 
     private Integer id;
 
@@ -14,6 +14,10 @@ public class CategoryVo{
     private Boolean status;
 
     private Integer sortOrder;
+
+    private String image;
+
+    private String imageHost;
 
     private Date createTime;
 
@@ -59,6 +63,22 @@ public class CategoryVo{
 
     public void setSortOrder(Integer sortOrder) {
         this.sortOrder = sortOrder;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
     }
 
     public Date getCreateTime() {

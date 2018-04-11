@@ -3,20 +3,24 @@
 <mapper namespace="edu.scu.qz.dao.idao.inherit.IOrderMapper">
     <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Order">
         <constructor>
-            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="order_no" javaType="java.lang.Long" jdbcType="BIGINT" />
-            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="shipping_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="payment" javaType="java.math.BigDecimal" jdbcType="DECIMAL" />
-            <arg column="payment_type" javaType="java.lang.Integer" jdbcType="INTEGER" />
-            <arg column="payment_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="order_no" javaType="java.lang.Long" jdbcType="BIGINT"/>
+            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="shipping_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="payment" javaType="java.math.BigDecimal" jdbcType="DECIMAL"/>
+            <arg column="payment_type" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="payment_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="send_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="end_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="close_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, order_no, user_id, shipping_id, payment, payment_type, payment_time, create_time,
-    update_time
+    id, order_no, user_id, shipping_id, payment, payment_type, status, payment_time,
+    send_time, end_time, close_time, create_time, update_time
   </sql>
     <select id="selectByUserIdAndOrderNo" resultMap="BaseResultMap" parameterType="map">
         SELECT

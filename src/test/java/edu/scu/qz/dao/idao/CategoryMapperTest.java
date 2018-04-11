@@ -1,6 +1,7 @@
 package edu.scu.qz.dao.idao;
 
 import com.google.common.collect.Lists;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +29,7 @@ import java.util.List;
 @ContextConfiguration(locations = {"classpath:applicationContext.xml", "file:src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
 public class CategoryMapperTest {
     @Autowired
-    private CategoryMapper categoryMapper;
+    private ICategoryMapper categoryMapper;
     private ArrayList<Integer> parentStack = Lists.newArrayList();
 
     private Category assembleCategory(String name, Integer parentId) {

@@ -9,4 +9,5 @@ public interface ICategoryMapper extends CategoryMapper {
 
     List<Category> selectCategoryChildrenByParentId(Integer parentId);
 
+    Category selectByCategoryName(String categoryName);
 }

@@ -35,8 +35,20 @@
         FROM apec_order_item
         WHERE order_no = #{orderNo}
     </select>
+    <select id="getByUserIdSubOrderNo" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order_item
+        WHERE sub_order_no = #{subOrderNo} AND user_id=#{userId}
+    </select>
+    <select id="getBySubOrderNo" resultMap="BaseResultMap" parameterType="long">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_order_item
+        WHERE sub_order_no = #{subOrderNo}
+    </select>
 
-    <insert id="batchInsert" parameterType="list">
+    <insert id="batchInsertOrderItem" parameterType="list">
         insert into apec_order_item (id, user_id, order_no, sub_order_no, product_id, product_name, product_image,
         current_unit_price, quantity, total_price, create_time, update_time)
         values
