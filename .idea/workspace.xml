@@ -9,69 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" line="113" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02b444ec-6d03-4609-8a94-51cee2a74992" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/StatisticManageController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/CategoryCyberController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/OrderCyberController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProductCyberController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IStatisticService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/StatisticServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderShopVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShopDetailVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShopItemVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/UserItemVo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/sdo/AdminIndexSdo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/edu/scu/qz/service/impl/CategoryServiceImplTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/common/Const.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/CategoryManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/CategoryManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/OrderManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/OrderManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ProductManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/ShopManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/UserManageController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/backend/UserManageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ProducerController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/UserCyberController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/ShopCyberController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/CustormerController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/portal/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICategoryMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/ICategoryMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderItemMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IOrderItemMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IProductMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IProductMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopOrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IShopOrderMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IUserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/idao/inherit/IUserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Category.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Category.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Product.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shipping.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/Shipping.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/User.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/dao/pojo/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/ICategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/ICategoryService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IOrderService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IOrderService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IProductService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IShopService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/IUserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CartServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/CategoryServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/OrderServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ProductServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/ShopServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/CategoryVo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/CategoryVo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderShopProductVo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/OrderShopProductVo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ProductDetailVo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ProductDetailVo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ProductListVo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ProductItemVo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShippingVo.java" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/qz/vo/ShippingVo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/apec.properties" afterPath="$PROJECT_DIR$/src/main/resources/apec.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICategoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/ICategoryMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IProductMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IProductMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShippingMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShippingMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopOrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IShopOrderMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IUserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/inherit/IUserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/scu/qz/dao/idao/CategoryMapperTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/scu/qz/dao/idao/CategoryMapperTest.java" />
-    </list>
+    <list default="true" id="02b444ec-6d03-4609-8a94-51cee2a74992" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -113,8 +51,8 @@
       <file leaf-file-name="OrderCyberController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/OrderCyberController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state relative-caret-position="779">
+              <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -124,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/apec.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -340,9 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -384,55 +319,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="cybershop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qz" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
@@ -440,14 +327,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApecService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mappers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApecService" type="b2602c69:ProjectViewProjectNode" />
@@ -492,6 +371,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -965,6 +847,7 @@
       <workItem from="1524557293405" duration="1154000" />
       <workItem from="1524579899232" duration="681000" />
       <workItem from="1524624444216" duration="3384000" />
+      <workItem from="1524659352246" duration="48000" />
     </task>
     <servers />
   </component>
@@ -1001,7 +884,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346404000" />
+    <option name="totallyTimeSpent" value="346452000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1014,7 +897,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30087528" sideWeight="0.50437635" order="7" side_tool="true" content_ui="tabs" />
@@ -1030,7 +912,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3954496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32286024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1038,8 +919,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41028446" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1971831" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4310722" sideWeight="0.49348533" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19693655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44091904" sideWeight="0.49348533" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1049,6 +930,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32286024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38136512" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1100,12 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <marker date="1523885819059" expanded="true" signature="1334:1449" ph="SELECT FROM apec_category" />
-            <marker date="1523885819059" expanded="true" signature="1560:1674" ph="SELECT FROM apec_category" />
-            <marker date="1523885819059" expanded="true" signature="1759:1800" ph="SELECT count... apec_category" />
-            <marker date="1523885819059" expanded="true" signature="1759:1814" ph="SELECT count... apec_category" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1470,7 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,8 +1371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/scu/qz/controller/cybershop/OrderCyberController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        <state relative-caret-position="779">
+          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1505,7 +1380,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/apec.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
           <folding />
         </state>
       </provider>
