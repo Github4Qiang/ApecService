@@ -11,7 +11,6 @@ public class OrderVo {
     private Long orderNo;           // 订单号
     private BigDecimal payment;     // 订单金额
     private Integer paymentType;   // 支付类型
-    private Integer postage;        // 运费
     private Integer status;         // 订单状态
 
     private String paymentTime;
@@ -21,7 +20,7 @@ public class OrderVo {
     private String createTime;
 
     // 订单明细
-    private List<OrderItemVo> orderItemVoList;
+    private List<OrderShopProductVo> orderShopProductVoList;
 
     private String imageHost;
     private Integer shippingId;
@@ -29,6 +28,14 @@ public class OrderVo {
 
     // 收货地址
     private ShippingVo shippingVo;
+
+    public List<OrderShopProductVo> getOrderShopProductVoList() {
+        return orderShopProductVoList;
+    }
+
+    public void setOrderShopProductVoList(List<OrderShopProductVo> orderShopProductVoList) {
+        this.orderShopProductVoList = orderShopProductVoList;
+    }
 
     public String getCreateTime() {
         return createTime;
@@ -78,14 +85,6 @@ public class OrderVo {
         this.paymentType = paymentType;
     }
 
-    public Integer getPostage() {
-        return postage;
-    }
-
-    public void setPostage(Integer postage) {
-        this.postage = postage;
-    }
-
     public Integer getStatus() {
         return status;
     }
@@ -124,14 +123,6 @@ public class OrderVo {
 
     public void setCloseTime(String closeTime) {
         this.closeTime = closeTime;
-    }
-
-    public List<OrderItemVo> getOrderItemVoList() {
-        return orderItemVoList;
-    }
-
-    public void setOrderItemVoList(List<OrderItemVo> orderItemVoList) {
-        this.orderItemVoList = orderItemVoList;
     }
 
     public String getImageHost() {

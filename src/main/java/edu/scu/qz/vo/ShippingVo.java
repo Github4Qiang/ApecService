@@ -6,8 +6,6 @@ public class ShippingVo {
 
     private String receiverPhone;
 
-    private String receiverMobile;
-
     private String receiverProvince;
 
     private String receiverCity;
@@ -32,14 +30,6 @@ public class ShippingVo {
 
     public void setReceiverPhone(String receiverPhone) {
         this.receiverPhone = receiverPhone;
-    }
-
-    public String getReceiverMobile() {
-        return receiverMobile;
-    }
-
-    public void setReceiverMobile(String receiverMobile) {
-        this.receiverMobile = receiverMobile;
     }
 
     public String getReceiverProvince() {

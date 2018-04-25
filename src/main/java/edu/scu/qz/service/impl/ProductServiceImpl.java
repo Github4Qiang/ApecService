@@ -6,17 +6,21 @@ import com.google.common.collect.Lists;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ResponseCode;
 import edu.scu.qz.common.ServerResponse;
-import edu.scu.qz.dao.idao.CategoryMapper;
-import edu.scu.qz.dao.idao.ProductMapper;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
+import edu.scu.qz.dao.idao.inherit.IProductMapper;
+import edu.scu.qz.dao.idao.inherit.IShopMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.dao.pojo.Product;
+import edu.scu.qz.dao.pojo.Shop;
 import edu.scu.qz.service.ICategoryService;
 import edu.scu.qz.service.IProductService;
 import edu.scu.qz.util.DateTimeUtil;
 import edu.scu.qz.util.PropertiesUtil;
 import edu.scu.qz.vo.ProductDetailVo;
-import edu.scu.qz.vo.ProductListVo;
+import edu.scu.qz.vo.ProductItemVo;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,16 +29,25 @@ import java.util.List;
 @Service("iProductService")
 public class ProductServiceImpl implements IProductService {
 
+    private static Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
+
     @Autowired
     private ICategoryService iCategoryService;
     @Autowired
-    private CategoryMapper categoryMapper;
+    private IShopMapper shopMapper;
     @Autowired
-    private ProductMapper productMapper;
+    private ICategoryMapper categoryMapper;
+    @Autowired
+    private IProductMapper productMapper;
 
     @Override
-    public ServerResponse saveOrUpdateProduct(Product product) {
+    public ServerResponse saveOrUpdateProduct(Integer userId, Product product) {
         if (product != null) {
+            Shop shop = shopMapper.selectByUserId(userId);
+            if (shop == null) {
+                return ServerResponse.createByErrorMessage("用户未创建店铺");
+            }
+
             // 第一张子图设置成主图
             if (StringUtils.isNotBlank(product.getSubImages())) {
                 String[] subImageArray = product.getSubImages().split(",");
@@ -44,12 +57,15 @@ public class ProductServiceImpl implements IProductService {
             }
             // product.id 不为空则代表更新操作；为空则代表添加操作
             if (product.getId() != null) {
-                int rowCount = productMapper.updateByPrimaryKey(product);
+                int rowCount = productMapper.updateByPrimaryKeySelective(product);
                 if (rowCount > 0) {
                     return ServerResponse.createBySuccess("更新产品成功");
                 }
                 return ServerResponse.createByErrorMessage("更新产品失败");
             } else {
+                product.setShopId(shop.getId());
+                product.setShopName(shop.getShopName());
+                product.setStatus(Const.ProductStatusEnum.ON_SALE.getCode());
                 int rowCount = productMapper.insert(product);
                 if (rowCount > 0) {
                     return ServerResponse.createBySuccess("新增产品成功");
@@ -61,14 +77,71 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public ServerResponse setSaleStatus(Integer productId, Integer status) {
+    public ServerResponse setSaleStatus(Integer role, Integer productId, Integer status) {
         if (productId == null || status == null) {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(), ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
-        Product product = new Product();
-        product.setId(productId);
-        product.setStatus(status);
-        int rowCount = productMapper.updateByPrimaryKeySelective(product);
+        Product product = productMapper.selectByPrimaryKey(productId);
+        if (status == Const.ProductStatusEnum.FORCE_DOWN.getCode() && Const.Role.ROLE_ADMIN != role) {
+            return ServerResponse.createByErrorMessage("您没有强制下架的权限");
+        } else if (product.getStatus() == Const.ProductStatusEnum.FORCE_DOWN.getCode() && role != Const.Role.ROLE_ADMIN) {
+            return ServerResponse.createByErrorMessage("商品已经被强制下架，请联系管理员恢复商品状态");
+        } else if (product.getStatus() == Const.ProductStatusEnum.DELETE.getCode()) {
+            return ServerResponse.createByErrorMessage("商品已被删除");
+        }
+
+        Product updateProduct = new Product();
+        updateProduct.setId(productId);
+        updateProduct.setStatus(status);
+        int rowCount = productMapper.updateByPrimaryKeySelective(updateProduct);
+        if (rowCount > 0) {
+            return ServerResponse.createBySuccess("修改产品销售状态成功");
+        }
+        return ServerResponse.createByErrorMessage("修改产品销售状态失败");
+    }
+
+    @Override
+    public ServerResponse forceDown(Integer role, Integer productId) {
+        if (productId == null) {
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(), ResponseCode.ILLEGAL_ARGUMENT.getDesc());
+        }
+        Product product = productMapper.selectByPrimaryKey(productId);
+        if (Const.Role.ROLE_ADMIN != role) {
+            return ServerResponse.createByErrorMessage("您没有强制下架的权限");
+        } else if (product.getStatus() == Const.ProductStatusEnum.FORCE_DOWN.getCode()) {
+            return ServerResponse.createByErrorMessage("商品已经被强制下架，请勿重复操作");
+        } else if (product.getStatus() == Const.ProductStatusEnum.DELETE.getCode()) {
+            return ServerResponse.createByErrorMessage("商品已被删除，不用再去管它");
+        }
+
+        Product updateProduct = new Product();
+        updateProduct.setId(productId);
+        updateProduct.setStatus(Const.ProductStatusEnum.FORCE_DOWN.getCode());
+        int rowCount = productMapper.updateByPrimaryKeySelective(updateProduct);
+        if (rowCount > 0) {
+            return ServerResponse.createBySuccess("修改产品销售状态成功");
+        }
+        return ServerResponse.createByErrorMessage("修改产品销售状态失败");
+    }
+
+    @Override
+    public ServerResponse forceRecover(Integer role, Integer productId) {
+        if (productId == null) {
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(), ResponseCode.ILLEGAL_ARGUMENT.getDesc());
+        }
+        Product product = productMapper.selectByPrimaryKey(productId);
+        if (product == null) {
+            return ServerResponse.createByErrorMessage("商品不存在：" + productId);
+        } else if (Const.Role.ROLE_ADMIN != role) {
+            return ServerResponse.createByErrorMessage("您没有恢复强制下架的权限");
+        } else if (product.getStatus() != Const.ProductStatusEnum.FORCE_DOWN.getCode()) {
+            return ServerResponse.createByErrorMessage("商品没有被强制下架，不需要恢复");
+        }
+
+        Product updateProduct = new Product();
+        updateProduct.setId(productId);
+        updateProduct.setStatus(Const.ProductStatusEnum.ON_SALE.getCode());
+        int rowCount = productMapper.updateByPrimaryKeySelective(updateProduct);
         if (rowCount > 0) {
             return ServerResponse.createBySuccess("修改产品销售状态成功");
         }
@@ -93,15 +166,39 @@ public class ProductServiceImpl implements IProductService {
     public ServerResponse getProductList(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<Product> productList = productMapper.selectList();
-        List<ProductListVo> productListVoList = Lists.newArrayList();
+        List<ProductItemVo> productItemVoList = Lists.newArrayList();
         for (Product productItem : productList) {
-            ProductListVo productListVo = assembleProductListVo(productItem);
-            productListVoList.add(productListVo);
+            ProductItemVo productItemVo = assembleProductItemVo(productItem);
+            productItemVoList.add(productItemVo);
         }
         // 根据 Product-List 计算 PageInfo 中参数值
         PageInfo pageResult = new PageInfo(productList);
-        // 将 PageInfo 中数据换成 ProductListVo-List
-        pageResult.setList(productListVoList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(productItemVoList);
+        return ServerResponse.createBySuccess(pageResult);
+    }
+
+    // 后台方法，返回商品列表，包括已下架的商品
+    @Override
+    public ServerResponse getProductList(Integer status, Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<Product> productList = null;
+        if (status < 0) {
+            productList = productMapper.selectList();
+        } else if (status == Const.ProductStatusEnum.DELETE.getCode()) {
+            return ServerResponse.createByErrorMessage("删除的商品没什么用了，不要管他啦~");
+        } else {
+            productList = productMapper.selectListByStatus(status);
+        }
+        List<ProductItemVo> productItemVoList = Lists.newArrayList();
+        for (Product productItem : productList) {
+            ProductItemVo productItemVo = assembleProductItemVo(productItem);
+            productItemVoList.add(productItemVo);
+        }
+        // 根据 Product-List 计算 PageInfo 中参数值
+        PageInfo pageResult = new PageInfo(productList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(productItemVoList);
         return ServerResponse.createBySuccess(pageResult);
     }
 
@@ -113,19 +210,19 @@ public class ProductServiceImpl implements IProductService {
             productName = new StringBuilder().append("%").append(productName).append("%").toString();
         }
         List<Product> productList = productMapper.selectByNameAndProductId(productName, productId);
-        List<ProductListVo> productListVoList = Lists.newArrayList();
+        List<ProductItemVo> productItemVoList = Lists.newArrayList();
         for (Product productItem : productList) {
-            ProductListVo productListVo = assembleProductListVo(productItem);
-            productListVoList.add(productListVo);
+            ProductItemVo productItemVo = assembleProductItemVo(productItem);
+            productItemVoList.add(productItemVo);
         }
         // 根据 Product-List 计算 PageInfo 中参数值
         PageInfo pageResult = new PageInfo(productList);
-        // 将 PageInfo 中数据换成 ProductListVo-List
-        pageResult.setList(productListVoList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(productItemVoList);
         return ServerResponse.createBySuccess(pageResult);
     }
 
-    // todo: 产品的下架和删除的区别 —— 数据库中不存在叫删除；改变 status 是下架
+    // 买家用的方法，只能查看在售商品
     @Override
     public ServerResponse<ProductDetailVo> getProductDetail(Integer productId) {
         if (productId == null) {
@@ -142,6 +239,33 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(productDetailVo);
     }
 
+    // 卖家、管理员用的方法，可以查看在售、下架商品
+    @Override
+    public ServerResponse<ProductDetailVo> getProductDetail(Integer userId, Integer productId) {
+        if (productId == null) {
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(), ResponseCode.ILLEGAL_ARGUMENT.getDesc());
+        }
+        Product product = productMapper.selectByPrimaryKey(productId);
+        if (product == null) {
+            return ServerResponse.createByErrorMessage("产品下架或删除");
+        }
+        // 传入 userId 的是卖家；不传的是管理员
+        if (userId != null) {
+            Shop shop = shopMapper.selectByUserId(userId);
+            if (shop == null) {
+                return ServerResponse.createByErrorMessage("用户未开通店铺");
+            } else if (product.getShopId() != shop.getId()) {
+                return ServerResponse.createByErrorMessage("这不是您店铺中的商品：" + product.getId());
+            }
+        }
+
+        if (product.getStatus() == Const.ProductStatusEnum.ON_SALE.getCode() || product.getStatus() == Const.ProductStatusEnum.TAKE_DOWN.getCode()) {
+            ProductDetailVo productDetailVo = assembleProductDetailVo(product);
+            return ServerResponse.createBySuccess(productDetailVo);
+        }
+        return ServerResponse.createByErrorMessage("产品下架或删除");
+    }
+
     // 前台方法，根据关键字或产品类别返回在售商品，已下架的商品不会返回
     @Override
     public ServerResponse<PageInfo> getProductByKeywordCategory(String keyword, Integer categoryId, Integer pageNum, Integer pageSize, String orderBy) {
@@ -154,8 +278,8 @@ public class ProductServiceImpl implements IProductService {
             // 当该分类不存在，并且也没有关键字时，返回空的结果集
             if (category == null && StringUtils.isBlank(keyword)) {
                 PageHelper.startPage(pageNum, pageSize);
-                List<ProductListVo> productListVoList = Lists.newArrayList();
-                PageInfo pageInfo = new PageInfo(productListVoList);
+                List<ProductItemVo> productItemVoList = Lists.newArrayList();
+                PageInfo pageInfo = new PageInfo(productItemVoList);
                 return ServerResponse.createBySuccess(pageInfo);
             }
             // 当该分类存在时，得到所有该分类的子分类
@@ -176,39 +300,74 @@ public class ProductServiceImpl implements IProductService {
         List<Product> productList = productMapper.selectByNameAndCategoryIds(
                 StringUtils.isBlank(keyword) ? null : keyword,
                 categoryIdList.isEmpty() ? null : categoryIdList);
-        List<ProductListVo> productListVoList = Lists.newArrayList();
+        List<ProductItemVo> productItemVoList = Lists.newArrayList();
         for (Product product : productList) {
             // 只返回在售商品；已下架的商品跳过
             if (product.getStatus() == Const.ProductStatusEnum.ON_SALE.getCode()) {
-                ProductListVo productListVo = assembleProductListVo(product);
-                productListVoList.add(productListVo);
+                ProductItemVo productItemVo = assembleProductItemVo(product);
+                productItemVoList.add(productItemVo);
             }
         }
         PageInfo pageInfo = new PageInfo(productList);
-        pageInfo.setList(productListVoList);
+        pageInfo.setList(productItemVoList);
         return ServerResponse.createBySuccess(pageInfo);
+    }
+
+    // 卖家方法，返回所有商品列表
+    @Override
+    public ServerResponse<PageInfo> getShopProductList(Integer userId, Integer pageNum, Integer pageSize) {
+        Shop shop = shopMapper.selectByUserId(userId);
+        if (shop == null) {
+            return ServerResponse.createByErrorMessage("用户未开通店铺");
+        } else if (shop.getProducerId() != userId) {
+            return ServerResponse.createByErrorMessage("这可不是您的店铺，别乱动哦~");
+        }
+        PageHelper.startPage(pageNum, pageSize);
+        List<Product> productList = productMapper.selectByShopId(shop.getId());
+        List<ProductItemVo> productItemVoList = Lists.newArrayList();
+        for (Product productItem : productList) {
+            if (productItem.getStatus() != Const.ProductStatusEnum.DELETE.getCode()) {
+                ProductItemVo productItemVo = assembleProductItemVo(productItem);
+                productItemVoList.add(productItemVo);
+            }
+        }
+        // 根据 Product-List 计算 PageInfo 中参数值
+        PageInfo pageResult = new PageInfo(productItemVoList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(productItemVoList);
+        return ServerResponse.createBySuccess(pageResult);
     }
 
     private ProductDetailVo assembleProductDetailVo(Product product) {
         ProductDetailVo productDetailVo = new ProductDetailVo();
         productDetailVo.setId(product.getId());
+        productDetailVo.setShopId(product.getShopId());
+        productDetailVo.setShopName(product.getShopName());
         productDetailVo.setSubtitle(product.getSubtitle());
         productDetailVo.setPrice(product.getPrice());
         productDetailVo.setMainImage(product.getMainImage());
         productDetailVo.setSubImages(product.getSubImages());
-        productDetailVo.setCategoryId(product.getCategoryId());
+        productDetailVo.setCategoryIdLv3(product.getCategoryId());
         productDetailVo.setDetail(product.getDetail());
         productDetailVo.setName(product.getName());
         productDetailVo.setStatus(product.getStatus());
+        productDetailVo.setStatusDesc(Const.ProductStatusEnum.codeOf(product.getStatus()).getValue());
         productDetailVo.setStock(product.getStock());
 
         productDetailVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", "http://image.apec.com/"));
-
-        Category category = categoryMapper.selectByPrimaryKey(product.getCategoryId());
-        if (category == null) {
-            productDetailVo.setParentCategoryId(0); // 默认是根节点
+        // 三级品类详情
+        Category categoryLv3 = categoryMapper.selectByPrimaryKey(product.getCategoryId());
+        if (categoryLv3 != null) {
+            productDetailVo.setCategoryIdLv2(categoryLv3.getParentId());
+            // 二级品类详情
+            Category categoryLv2 = categoryMapper.selectByPrimaryKey(categoryLv3.getParentId());
+            if (categoryLv2 != null) {
+                productDetailVo.setCategoryIdLv1(categoryLv2.getParentId());
+            } else {
+                logger.warn("二级品类不存在");
+            }
         } else {
-            productDetailVo.setParentCategoryId(category.getParentId());
+            logger.warn("三级品类不存在");
         }
 
         productDetailVo.setCreateTime(DateTimeUtil.dateToStr(product.getCreateTime()));
@@ -217,16 +376,22 @@ public class ProductServiceImpl implements IProductService {
         return productDetailVo;
     }
 
-    private ProductListVo assembleProductListVo(Product product) {
-        ProductListVo productListVo = new ProductListVo();
-        productListVo.setId(product.getId());
-        productListVo.setSubtitle(product.getSubtitle());
-        productListVo.setPrice(product.getPrice());
-        productListVo.setMainImage(product.getMainImage());
-        productListVo.setCategoryId(product.getCategoryId());
-        productListVo.setName(product.getName());
-        productListVo.setStatus(product.getStatus());
-        productListVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", "http://image.apec.com/"));
-        return productListVo;
+    private ProductItemVo assembleProductItemVo(Product product) {
+        ProductItemVo productItemVo = new ProductItemVo();
+        productItemVo.setId(product.getId());
+        productItemVo.setShopId(product.getShopId());
+        productItemVo.setShopName(product.getShopName());
+        productItemVo.setSubtitle(product.getSubtitle());
+        productItemVo.setStock(product.getStock());
+        productItemVo.setPrice(product.getPrice());
+        productItemVo.setStatusDesc(Const.ProductStatusEnum.codeOf(product.getStatus()).getValue());
+        productItemVo.setMainImage(product.getMainImage());
+        productItemVo.setName(product.getName());
+        productItemVo.setStatus(product.getStatus());
+        productItemVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", "http://image.apec.com/"));
+
+        productItemVo.setCategory(iCategoryService.getGeneticList(product.getCategoryId()).getData());
+
+        return productItemVo;
     }
 }

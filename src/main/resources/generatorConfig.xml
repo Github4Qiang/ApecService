@@ -56,9 +56,12 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="apec_shop" domainObjectName="Shop" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
+        <!--<table tableName="apec_shop_order" domainObjectName="ShopOrder" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false"></table>-->
+        <!--<table tableName="apec_shop" domainObjectName="Shop" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false"></table>-->
         <!--<table tableName="apec_shipping" domainObjectName="Shipping" enableCountByExample="false"-->
         <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
         <!--selectByExampleQueryId="false"></table>-->
@@ -67,9 +70,9 @@
         <!--<table tableName="apec_cart_item" domainObjectName="CartItem" enableCountByExample="false"-->
         <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
         <!--selectByExampleQueryId="false"></table>-->
-        <!--<table tableName="apec_category" domainObjectName="Category" enableCountByExample="false"-->
-        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--selectByExampleQueryId="false"></table>-->
+        <table tableName="apec_category" domainObjectName="Category" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
         <!--<table tableName="apec_order" domainObjectName="Order" enableCountByExample="false"-->
         <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
         <!--selectByExampleQueryId="false"></table>-->
@@ -80,10 +83,10 @@
         <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
         <!--selectByExampleQueryId="false"></table>-->
         <!--<table tableName="apec_product" domainObjectName="Product" enableCountByExample="false"-->
-        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--selectByExampleQueryId="false">-->
-        <!--<columnOverride column="detail" jdbcType="VARCHAR"/>-->
-        <!--<columnOverride column="sub_images" jdbcType="VARCHAR"/>-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<columnOverride column="detail" jdbcType="VARCHAR"/>-->
+            <!--<columnOverride column="sub_images" jdbcType="VARCHAR"/>-->
         <!--</table>-->
         <!--<table tableName="apec_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"-->
         <!--enableDeleteByExample="false" enableSelectByExample="false"-->

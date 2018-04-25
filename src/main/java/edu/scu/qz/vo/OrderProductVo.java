@@ -5,16 +5,16 @@ import java.util.List;
 
 public class OrderProductVo {
 
-    private List<OrderItemVo> orderItemVoList;
+    private List<OrderShopProductVo> orderShopProductVoList;
     private BigDecimal productTotalPrice;
     private String imageHost;
 
-    public List<OrderItemVo> getOrderItemVoList() {
-        return orderItemVoList;
+    public List<OrderShopProductVo> getOrderShopProductVoList() {
+        return orderShopProductVoList;
     }
 
-    public void setOrderItemVoList(List<OrderItemVo> orderItemVoList) {
-        this.orderItemVoList = orderItemVoList;
+    public void setOrderShopProductVoList(List<OrderShopProductVo> orderShopProductVoList) {
+        this.orderShopProductVoList = orderShopProductVoList;
     }
 
     public BigDecimal getProductTotalPrice() {

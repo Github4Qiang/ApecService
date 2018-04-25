@@ -6,6 +6,8 @@
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="parent_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="image" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="level" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT"/>
             <arg column="sort_order" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
@@ -13,7 +15,7 @@
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, parent_id, name, status, sort_order, create_time, update_time
+    id, parent_id, name, image, level, status, sort_order, create_time, update_time
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
@@ -21,29 +23,17 @@
         from apec_category
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="selectCategoryChildrenByParentId" resultMap="BaseResultMap" parameterType="int">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_category
-        WHERE parent_id = #{parentId}
-    </select>
-    <select id="selectByCategoryName" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from apec_category
-        where name = #{name};
-    </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_category
     where id = #{id,jdbcType=INTEGER}
   </delete>
     <insert id="insert" parameterType="edu.scu.qz.dao.pojo.Category">
     insert into apec_category (id, parent_id, name, 
-      status, sort_order, create_time, 
-      update_time)
+      image, level, status, sort_order, 
+      create_time, update_time)
     values (#{id,jdbcType=INTEGER}, #{parentId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
-      #{status,jdbcType=BIT}, #{sortOrder,jdbcType=INTEGER}, now(),
-      now())
+      #{image,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{status,jdbcType=BIT}, #{sortOrder,jdbcType=INTEGER}, 
+      now(), now())
   </insert>
     <insert id="insertSelective" parameterType="edu.scu.qz.dao.pojo.Category">
         insert into apec_category
@@ -56,6 +46,12 @@
             </if>
             <if test="name != null">
                 name,
+            </if>
+            <if test="image != null">
+                image,
+            </if>
+            <if test="level != null">
+                level,
             </if>
             <if test="status != null">
                 status,
@@ -80,6 +76,12 @@
             <if test="name != null">
                 #{name,jdbcType=VARCHAR},
             </if>
+            <if test="image != null">
+                #{image,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                #{level,jdbcType=INTEGER},
+            </if>
             <if test="status != null">
                 #{status,jdbcType=BIT},
             </if>
@@ -103,6 +105,12 @@
             <if test="name != null">
                 name = #{name,jdbcType=VARCHAR},
             </if>
+            <if test="image != null">
+                image = #{image,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                level = #{level,jdbcType=INTEGER},
+            </if>
             <if test="status != null">
                 status = #{status,jdbcType=BIT},
             </if>
@@ -122,6 +130,8 @@
     update apec_category
     set parent_id = #{parentId,jdbcType=INTEGER},
       name = #{name,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
       status = #{status,jdbcType=BIT},
       sort_order = #{sortOrder,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},

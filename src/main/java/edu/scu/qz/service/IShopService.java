@@ -13,7 +13,15 @@ public interface IShopService {
 
     ServerResponse activateShop(Integer producerId);
 
+    ServerResponse unlockShop(Integer shopId);
+
     ServerResponse getShopInfo(Integer producerId);
+
+    ServerResponse getShopList(Integer status, Integer pageNum, Integer pageSize);
+
+    ServerResponse getShopInfoByShopId(Integer shopId);
+
+    ServerResponse lockShop(Integer shopId);
 }
 
 

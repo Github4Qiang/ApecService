@@ -1,9 +1,8 @@
 package edu.scu.qz.vo;
 
-import java.util.Date;
 import java.util.List;
 
-public class CategoryVo{
+public class CategoryVo {
 
     private Integer id;
 
@@ -15,11 +14,35 @@ public class CategoryVo{
 
     private Integer sortOrder;
 
-    private Date createTime;
+    private String image;
 
-    private Date updateTime;
+    private String imageHost;
+
+    private Integer level;
+
+    private String createTime;
+
+    private String updateTime;
+
+    private CategoryVo parent;
 
     private List<CategoryVo> children;
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
+
+    public CategoryVo getParent() {
+        return parent;
+    }
+
+    public void setParent(CategoryVo parent) {
+        this.parent = parent;
+    }
 
     public Integer getId() {
         return id;
@@ -61,20 +84,20 @@ public class CategoryVo{
         this.sortOrder = sortOrder;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public String getImage() {
+        return image;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public String getImageHost() {
+        return imageHost;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
     }
 
     public List<CategoryVo> getChildren() {
@@ -83,5 +106,38 @@ public class CategoryVo{
 
     public void setChildren(List<CategoryVo> children) {
         this.children = children;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "CategoryVo{" +
+                "id=" + id +
+                ", parentId=" + parentId +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                ", sortOrder=" + sortOrder +
+                ", image='" + image + '\'' +
+                ", imageHost='" + imageHost + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
+                ", parent=" + parent +
+                ", children=" + children +
+                '}';
     }
 }

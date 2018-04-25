@@ -5,6 +5,7 @@
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="shop_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="balance" javaType="java.math.BigDecimal" jdbcType="DECIMAL"/>
             <arg column="shop_status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="shop_status_desc" javaType="java.lang.String" jdbcType="VARCHAR"/>
             <arg column="producer_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
@@ -20,9 +21,9 @@
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, shop_name, shop_status, shop_status_desc, producer_id, producer_name, producer_province, 
-    producer_city, producer_district, producer_address, server_phone, bank_card, create_time, 
-    update_time
+    id, shop_name, balance, shop_status, shop_status_desc, producer_id, producer_name, 
+    producer_province, producer_city, producer_district, producer_address, server_phone, 
+    bank_card, create_time, update_time
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
@@ -30,32 +31,23 @@
         from apec_shop
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="selectByIdUserId" parameterType="map" resultType="int">
-    SELECT COUNT(1) FROM apec_shop WHERE id=#{id} AND producer_id=#{producerId}
-  </select>
-    <select id="countByUserId" resultType="java.lang.Integer" parameterType="int">
-    SELECT COUNT(1) FROM apec_shop WHERE producer_id=#{producerId};
-  </select>
-    <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
-    SELECT * FROM apec_shop WHERE producer_id=#{producerId};
-    </select>
-
-
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_shop
     where id = #{id,jdbcType=INTEGER}
   </delete>
     <insert id="insert" parameterType="edu.scu.qz.dao.pojo.Shop">
-    insert into apec_shop (id, shop_name, shop_status, 
-      shop_status_desc, producer_id, producer_name, 
-      producer_province, producer_city, producer_district, 
-      producer_address, server_phone, bank_card, 
-      create_time, update_time)
-    values (#{id,jdbcType=INTEGER}, #{shopName,jdbcType=VARCHAR}, #{shopStatus,jdbcType=INTEGER}, 
-      #{shopStatusDesc,jdbcType=VARCHAR}, #{producerId,jdbcType=INTEGER}, #{producerName,jdbcType=VARCHAR}, 
-      #{producerProvince,jdbcType=VARCHAR}, #{producerCity,jdbcType=VARCHAR}, #{producerDistrict,jdbcType=VARCHAR}, 
-      #{producerAddress,jdbcType=VARCHAR}, #{serverPhone,jdbcType=VARCHAR}, #{bankCard,jdbcType=VARCHAR}, 
-      now(), now())
+    insert into apec_shop (id, shop_name, balance, 
+      shop_status, shop_status_desc, producer_id, 
+      producer_name, producer_province, producer_city, 
+      producer_district, producer_address, server_phone, 
+      bank_card, create_time, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{shopName,jdbcType=VARCHAR}, #{balance,jdbcType=DECIMAL}, 
+      #{shopStatus,jdbcType=INTEGER}, #{shopStatusDesc,jdbcType=VARCHAR}, #{producerId,jdbcType=INTEGER}, 
+      #{producerName,jdbcType=VARCHAR}, #{producerProvince,jdbcType=VARCHAR}, #{producerCity,jdbcType=VARCHAR}, 
+      #{producerDistrict,jdbcType=VARCHAR}, #{producerAddress,jdbcType=VARCHAR}, #{serverPhone,jdbcType=VARCHAR}, 
+      #{bankCard,jdbcType=VARCHAR}, now(), now()
+      )
   </insert>
     <insert id="insertSelective" parameterType="edu.scu.qz.dao.pojo.Shop">
         insert into apec_shop
@@ -65,6 +57,9 @@
             </if>
             <if test="shopName != null">
                 shop_name,
+            </if>
+            <if test="balance != null">
+                balance,
             </if>
             <if test="shopStatus != null">
                 shop_status,
@@ -110,6 +105,9 @@
             <if test="shopName != null">
                 #{shopName,jdbcType=VARCHAR},
             </if>
+            <if test="balance != null">
+                #{balance,jdbcType=DECIMAL},
+            </if>
             <if test="shopStatus != null">
                 #{shopStatus,jdbcType=INTEGER},
             </if>
@@ -154,6 +152,9 @@
             <if test="shopName != null">
                 shop_name = #{shopName,jdbcType=VARCHAR},
             </if>
+            <if test="balance != null">
+                balance = #{balance,jdbcType=DECIMAL},
+            </if>
             <if test="shopStatus != null">
                 shop_status = #{shopStatus,jdbcType=INTEGER},
             </if>
@@ -196,6 +197,7 @@
     <update id="updateByPrimaryKey" parameterType="edu.scu.qz.dao.pojo.Shop">
     update apec_shop
     set shop_name = #{shopName,jdbcType=VARCHAR},
+      balance = #{balance,jdbcType=DECIMAL},
       shop_status = #{shopStatus,jdbcType=INTEGER},
       shop_status_desc = #{shopStatusDesc,jdbcType=VARCHAR},
       producer_id = #{producerId,jdbcType=INTEGER},

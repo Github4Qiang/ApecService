@@ -2,6 +2,7 @@ package edu.scu.qz.service;
 
 import com.github.pagehelper.PageInfo;
 import edu.scu.qz.common.ServerResponse;
+import edu.scu.qz.vo.OrderShopVo;
 
 import java.util.Map;
 
@@ -29,4 +30,10 @@ public interface IOrderService {
     ServerResponse manageSearch(Long orderNo, Integer pageNum, Integer pageSize);
 
     ServerResponse manageSendGoods(Long orderNo);
+
+    ServerResponse getSubOrderList(Integer userId, Integer pageNum, Integer pageSize, Integer status);
+
+    ServerResponse<OrderShopVo> getSubOrderDetail(Integer userId, Long subOrderNo);
+
+    ServerResponse send(Integer userId, Long subOrderNo);
 }

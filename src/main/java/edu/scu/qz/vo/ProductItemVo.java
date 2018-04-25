@@ -2,16 +2,60 @@ package edu.scu.qz.vo;
 
 import java.math.BigDecimal;
 
-public class ProductListVo {
+public class ProductItemVo {
 
     private Integer id;
-    private Integer categoryId;
+    private String category;
     private String name;
+    private Integer shopId;
+    private String shopName;
     private String subtitle;
     private String mainImage;
     private BigDecimal price;
+    private Integer stock;
     private Integer status;
+    private String statusDesc;
     private String imageHost;
+
+    public String getStatusDesc() {
+        return statusDesc;
+    }
+
+    public void setStatusDesc(String statusDesc) {
+        this.statusDesc = statusDesc;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public Integer getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(Integer shopId) {
+        this.shopId = shopId;
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
 
     public Integer getId() {
         return id;
@@ -19,14 +63,6 @@ public class ProductListVo {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
     }
 
     public String getName() {

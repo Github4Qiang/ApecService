@@ -9,7 +9,6 @@
             <arg column="shipping_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="payment" javaType="java.math.BigDecimal" jdbcType="DECIMAL"/>
             <arg column="payment_type" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-            <arg column="postage" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER"/>
             <arg column="payment_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
             <arg column="send_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
@@ -20,7 +19,7 @@
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, order_no, user_id, shipping_id, payment, payment_type, postage, status, payment_time, 
+    id, order_no, user_id, shipping_id, payment, payment_type, status, payment_time, 
     send_time, end_time, close_time, create_time, update_time
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -29,32 +28,6 @@
         from apec_order
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="selectByUserIdAndOrderNo" resultMap="BaseResultMap" parameterType="map">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_order
-        WHERE order_no = #{orderNo} AND user_id = #{userId}
-    </select>
-    <select id="selectByOrderNo" resultMap="BaseResultMap" parameterType="long">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_order
-        WHERE order_no = #{orderNo}
-    </select>
-    <select id="selectByUserId" parameterType="int" resultMap="BaseResultMap">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_order
-        WHERE user_id = #{userId}
-        ORDER BY create_time DESC
-    </select>
-    <select id="selectAllOrder" resultMap="BaseResultMap">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_order
-        ORDER BY create_time DESC
-    </select>
-
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_order
     where id = #{id,jdbcType=INTEGER}
@@ -62,14 +35,14 @@
     <insert id="insert" parameterType="edu.scu.qz.dao.pojo.Order">
     insert into apec_order (id, order_no, user_id, 
       shipping_id, payment, payment_type, 
-      postage, status, payment_time, 
-      send_time, end_time, close_time, 
-      create_time, update_time)
+      status, payment_time, send_time, 
+      end_time, close_time, create_time, 
+      update_time)
     values (#{id,jdbcType=INTEGER}, #{orderNo,jdbcType=BIGINT}, #{userId,jdbcType=INTEGER}, 
       #{shippingId,jdbcType=INTEGER}, #{payment,jdbcType=DECIMAL}, #{paymentType,jdbcType=INTEGER}, 
-      #{postage,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{paymentTime,jdbcType=TIMESTAMP}, 
-      #{sendTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{closeTime,jdbcType=TIMESTAMP}, 
-      now(), now())
+      #{status,jdbcType=INTEGER}, #{paymentTime,jdbcType=TIMESTAMP}, #{sendTime,jdbcType=TIMESTAMP}, 
+      #{endTime,jdbcType=TIMESTAMP}, #{closeTime,jdbcType=TIMESTAMP}, now(),
+      now())
   </insert>
     <insert id="insertSelective" parameterType="edu.scu.qz.dao.pojo.Order">
         insert into apec_order
@@ -92,9 +65,6 @@
             <if test="paymentType != null">
                 payment_type,
             </if>
-            <if test="postage != null">
-                postage,
-            </if>
             <if test="status != null">
                 status,
             </if>
@@ -111,10 +81,10 @@
                 close_time,
             </if>
             <if test="createTime != null">
-                now(),
+                create_time,
             </if>
             <if test="updateTime != null">
-                now(),
+                update_time,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -136,9 +106,6 @@
             <if test="paymentType != null">
                 #{paymentType,jdbcType=INTEGER},
             </if>
-            <if test="postage != null">
-                #{postage,jdbcType=INTEGER},
-            </if>
             <if test="status != null">
                 #{status,jdbcType=INTEGER},
             </if>
@@ -155,10 +122,10 @@
                 #{closeTime,jdbcType=TIMESTAMP},
             </if>
             <if test="createTime != null">
-                #{createTime,jdbcType=TIMESTAMP},
+                now(),
             </if>
             <if test="updateTime != null">
-                #{updateTime,jdbcType=TIMESTAMP},
+                now(),
             </if>
         </trim>
     </insert>
@@ -179,9 +146,6 @@
             </if>
             <if test="paymentType != null">
                 payment_type = #{paymentType,jdbcType=INTEGER},
-            </if>
-            <if test="postage != null">
-                postage = #{postage,jdbcType=INTEGER},
             </if>
             <if test="status != null">
                 status = #{status,jdbcType=INTEGER},
@@ -214,7 +178,6 @@
       shipping_id = #{shippingId,jdbcType=INTEGER},
       payment = #{payment,jdbcType=DECIMAL},
       payment_type = #{paymentType,jdbcType=INTEGER},
-      postage = #{postage,jdbcType=INTEGER},
       status = #{status,jdbcType=INTEGER},
       payment_time = #{paymentTime,jdbcType=TIMESTAMP},
       send_time = #{sendTime,jdbcType=TIMESTAMP},

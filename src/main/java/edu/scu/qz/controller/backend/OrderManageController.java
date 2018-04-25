@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping(value = "/manage/order/")
+@RequestMapping(value = "/administrator/order/")
 public class OrderManageController {
 
     @Autowired

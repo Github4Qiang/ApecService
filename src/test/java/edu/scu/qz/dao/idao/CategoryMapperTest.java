@@ -1,6 +1,7 @@
 package edu.scu.qz.dao.idao;
 
 import com.google.common.collect.Lists;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,13 +29,14 @@ import java.util.List;
 @ContextConfiguration(locations = {"classpath:applicationContext.xml", "file:src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
 public class CategoryMapperTest {
     @Autowired
-    private CategoryMapper categoryMapper;
+    private ICategoryMapper categoryMapper;
     private ArrayList<Integer> parentStack = Lists.newArrayList();
 
-    private Category assembleCategory(String name, Integer parentId) {
+    private Category assembleCategory(String name, Integer parentId, Integer level) {
         Category category = new Category();
         category.setName(name);
         category.setParentId(parentId);
+        category.setLevel(level);
         return category;
     }
 
@@ -55,14 +57,14 @@ public class CategoryMapperTest {
 
         // 获取一级分类列表
         List<WebElement> lv1ElementList = lv1ElementsArea.findElements(By.tagName("li"));
-        for (int i = 1; i < lv1ElementList.size() - 1; i++) {
+        for (int i = 1; i < lv1ElementList.size(); i++) {
             // 点击一级分类
             WebElement lv1Element = lv1ElementList.get(i);
             lv1Element.click();
 
             // 记录下 Lv-1 分类
             String lv1CategoryName = lv1Element.getText().trim();
-            Category lv1Category = assembleCategory(lv1CategoryName, parentStack.get(parentStack.size() - 1));
+            Category lv1Category = assembleCategory(lv1CategoryName, parentStack.get(parentStack.size() - 1), 1);
 
             // 存到数据库中
             categoryMapper.insert(lv1Category);
@@ -82,7 +84,7 @@ public class CategoryMapperTest {
 
                 // 记录下 Lv-2 分类
                 String lv2CategoryName = lv2ElementList.get(j).getText().trim();
-                Category lv2Category = assembleCategory(lv2CategoryName, parentStack.get(parentStack.size() - 1));
+                Category lv2Category = assembleCategory(lv2CategoryName, parentStack.get(parentStack.size() - 1), 2);
 
                 // 存到数据库中
                 categoryMapper.insert(lv2Category);
@@ -96,7 +98,7 @@ public class CategoryMapperTest {
                 for (WebElement lv3Element : lv3ElementList) {
                     // 记录下 Lv-2 分类
                     String lv3CategoryName = lv3Element.getText().trim();
-                    Category lv3Category = assembleCategory(lv3CategoryName, parentStack.get(parentStack.size() - 1));
+                    Category lv3Category = assembleCategory(lv3CategoryName, parentStack.get(parentStack.size() - 1), 3);
                     // 存到数据库中
                     categoryMapper.insert(lv3Category);
                 }

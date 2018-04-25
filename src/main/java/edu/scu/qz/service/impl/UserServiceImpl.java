@@ -1,27 +1,34 @@
 package edu.scu.qz.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Lists;
 import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.common.TokenCache;
-import edu.scu.qz.dao.idao.ShopMapper;
-import edu.scu.qz.dao.idao.UserMapper;
+import edu.scu.qz.dao.idao.inherit.IShopMapper;
+import edu.scu.qz.dao.idao.inherit.IUserMapper;
 import edu.scu.qz.dao.pojo.Shop;
 import edu.scu.qz.dao.pojo.User;
 import edu.scu.qz.service.IUserService;
+import edu.scu.qz.util.DateTimeUtil;
 import edu.scu.qz.util.MD5Util;
+import edu.scu.qz.vo.UserItemVo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Service("iUserService")
 public class UserServiceImpl implements IUserService {
 
     @Autowired
-    private UserMapper userMapper;
+    private IUserMapper userMapper;
     @Autowired
-    private ShopMapper shopMapper;
+    private IShopMapper shopMapper;
 
     @Override
     public ServerResponse<User> login(String username, String password) {
@@ -34,6 +41,14 @@ public class UserServiceImpl implements IUserService {
         User user = userMapper.selectLogin(username, md5Password);
         if (user == null) {
             return ServerResponse.createByErrorMessage("密码错误");
+        }
+        // 设置最后一次登录时间
+        User updateUser = new User();
+        updateUser.setId(user.getId());
+        updateUser.setLastLoginTime(new Date());
+        resultCount = userMapper.updateByPrimaryKeySelective(updateUser);
+        if (resultCount <= 0) {
+            return ServerResponse.createByErrorMessage("设置最后一次登录时间错误");
         }
 
         user.setPassword(StringUtils.EMPTY);
@@ -240,5 +255,40 @@ public class UserServiceImpl implements IUserService {
             }
         }
         return ServerResponse.createByErrorMessage("更改用户角色失败");
+    }
+
+    @Override
+    public ServerResponse getUserList(Integer pageNum, Integer pageSize, Integer role) {
+        List<User> userList;
+        PageHelper.startPage(pageNum, pageSize);
+        if (role < 0) {
+            userList = userMapper.selectUserList();
+        } else if (role == Const.Role.ROLE_ADMIN) {
+            return ServerResponse.createByErrorMessage("管理员信息不对外开放！");
+        } else {
+            userList = userMapper.selectUserListByRole(role);
+        }
+        List<UserItemVo> userItemVoList = Lists.newArrayList();
+        for (User user : userList) {
+            UserItemVo userItemVo = assembleUserItemVo(user);
+            userItemVoList.add(userItemVo);
+        }
+        // 根据 Product-List 计算 PageInfo 中参数值
+        PageInfo pageResult = new PageInfo(userList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(userItemVoList);
+        return ServerResponse.createBySuccess(pageResult);
+    }
+
+    private UserItemVo assembleUserItemVo(User user) {
+        UserItemVo userItemVo = new UserItemVo();
+        userItemVo.setId(user.getId());
+        userItemVo.setEmail(user.getEmail());
+        userItemVo.setUsername(user.getUsername());
+        userItemVo.setPhone(user.getPhone());
+        userItemVo.setRole(user.getRole());
+        userItemVo.setCreateTime(DateTimeUtil.dateToStr(user.getCreateTime()));
+        userItemVo.setUpdateTime(DateTimeUtil.dateToStr(user.getUpdateTime()));
+        return userItemVo;
     }
 }

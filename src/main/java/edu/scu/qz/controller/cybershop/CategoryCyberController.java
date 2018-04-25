@@ -4,37 +4,26 @@ import edu.scu.qz.common.Const;
 import edu.scu.qz.common.ResponseCode;
 import edu.scu.qz.common.ServerResponse;
 import edu.scu.qz.dao.pojo.User;
-import edu.scu.qz.service.IUserService;
+import edu.scu.qz.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/producer/user/")
-public class ProducerController {
+@RequestMapping("/producer/category/")
+public class CategoryCyberController {
 
     @Autowired
-    private IUserService iUserService;
+    private ICategoryService iCategoryService;
 
-    @RequestMapping(value = "get_producer_info.do", method = RequestMethod.POST)
+    @RequestMapping(value = "get_category.do", method = RequestMethod.GET)
     @ResponseBody
-    public ServerResponse<User> getProducerInfo(HttpSession session) {
-        // 判断用户已登录
-        User user = (User) session.getAttribute(Const.CURRENT_USER);
-        if (user == null) {
-            return ServerResponse.createByErrorMessage("卖家未登录，无法获得卖家当前信息");
-        }
-        // 是否已申请为店主：是，则返回店铺 id
-        return iUserService.checkProducerRole(user);
-    }
-
-    @RequestMapping(value = "get_information.do", method = RequestMethod.POST)
-    @ResponseBody
-    public ServerResponse<User> getInformation(HttpSession session) {
+    public ServerResponse getChilrenParallelCategory(HttpSession session, @RequestParam(value = "categoryId", defaultValue = "0") Integer categoryId) {
         // 判断用户已登录
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null) {
@@ -52,8 +41,7 @@ public class ProducerController {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_ACTIVATE.getCode(),
                     ResponseCode.NEED_ACTIVATE.getDesc());
         }
-        // 已经成为卖家 12
-        return ServerResponse.createBySuccess(user);
+        return iCategoryService.getChidrenParallelCategory(categoryId);
     }
 
 }

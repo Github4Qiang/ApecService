@@ -3,9 +3,11 @@ package edu.scu.qz.service.impl;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import edu.scu.qz.common.ServerResponse;
-import edu.scu.qz.dao.idao.CategoryMapper;
+import edu.scu.qz.dao.idao.inherit.ICategoryMapper;
 import edu.scu.qz.dao.pojo.Category;
 import edu.scu.qz.service.ICategoryService;
+import edu.scu.qz.util.DateTimeUtil;
+import edu.scu.qz.util.PropertiesUtil;
 import edu.scu.qz.vo.CategoryVo;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -23,8 +25,9 @@ public class CategoryServiceImpl implements ICategoryService {
     private Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
 
     @Autowired
-    private CategoryMapper categoryMapper;
+    private ICategoryMapper categoryMapper;
 
+    // todo: 添加品类时要上传图片
     @Override
     public ServerResponse addCategory(String categoryName, Integer parentId) {
         if (parentId == null || StringUtils.isBlank(categoryName)) {
@@ -62,11 +65,16 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public ServerResponse getChidrenParallelCategory(Integer categoryId) {
+        List<CategoryVo> categoryVoList = Lists.newArrayList();
         List<Category> categoryList = categoryMapper.selectCategoryChildrenByParentId(categoryId);
         if (CollectionUtils.isEmpty(categoryList)) {
             logger.info("未找到当前分类的子分类：" + categoryId);
         }
-        return ServerResponse.createBySuccess(categoryList);
+        for (Category category : categoryList) {
+            CategoryVo categoryVo = assembleCategoryVo(category);
+            categoryVoList.add(categoryVo);
+        }
+        return ServerResponse.createBySuccess(categoryVoList);
     }
 
 
@@ -105,15 +113,75 @@ public class CategoryServiceImpl implements ICategoryService {
         return ServerResponse.createBySuccess(categoryVoList);
     }
 
+    @Override
+    public ServerResponse<String> getGeneticList(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        if (category == null) {
+            return ServerResponse.createByErrorMessage("类别ID不存在");
+        }
+        return ServerResponse.createBySuccess(findParentCategory(categoryId));
+    }
+
+    @Override
+    public ServerResponse getCategoryDetail(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        if (category == null) {
+            return ServerResponse.createByErrorMessage("您所查找的 id 不正确");
+        }
+        CategoryVo categoryVo = getParentCategory(categoryId);
+        return ServerResponse.createBySuccess(categoryVo);
+    }
+
+    @Override
+    public ServerResponse save(Category category) {
+        int rowCount;
+
+        if (category.getId() == null) {
+            rowCount = categoryMapper.insert(category);
+        } else {
+            rowCount = categoryMapper.updateByPrimaryKeySelective(category);
+        }
+        if (rowCount > 0) {
+            return ServerResponse.createBySuccess("添加品类成功");
+        }
+        return ServerResponse.createByErrorMessage("添加品类失败");
+    }
+
+    private CategoryVo getParentCategory(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        if (category != null) {
+            CategoryVo childCategory = assembleCategoryVo(category);
+            CategoryVo parentCategory = getParentCategory(category.getParentId());
+            if (parentCategory != null)
+                childCategory.setParent(parentCategory);
+            return childCategory;
+        }
+        return null;
+    }
+
+    private String findParentCategory(Integer categoryId) {
+        Category category = categoryMapper.selectByPrimaryKey(categoryId);
+        if (category != null) {
+            String parentList = findParentCategory(category.getParentId());
+            if (StringUtils.isNotBlank(parentList))
+                return parentList + "->" + category.getName();
+            return category.getName();
+        }
+        return "";
+    }
+
     private CategoryVo assembleCategoryVo(Category category) {
         CategoryVo categoryVo = new CategoryVo();
         categoryVo.setId(category.getId());
         categoryVo.setParentId(category.getParentId());
         categoryVo.setName(category.getName());
+        categoryVo.setImage(category.getImage());
+        categoryVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
+        categoryVo.setLevel(category.getLevel());
         categoryVo.setStatus(category.getStatus());
         categoryVo.setSortOrder(category.getSortOrder());
-        categoryVo.setCreateTime(category.getCreateTime());
-        categoryVo.setUpdateTime(category.getUpdateTime());
+        categoryVo.setCreateTime(DateTimeUtil.dateToStr(category.getCreateTime()));
+        categoryVo.setUpdateTime(DateTimeUtil.dateToStr(category.getUpdateTime()));
         return categoryVo;
     }
 

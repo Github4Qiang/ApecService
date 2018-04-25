@@ -36,7 +36,7 @@ public class Const {
     }
 
     public enum ProductStatusEnum {
-        ON_SALE(1, "在线"), TAKE_DOWN(2, "下架"), DELETE(3, "删除");
+        ON_SALE(1, "在线"), VERIFY(2, "待审核"), TAKE_DOWN(3, "下架"), FORCE_DOWN(4, "强制下架"), LOCK(5, "店铺被锁定"), DELETE(5, "删除"), UN_PASS(6, "审核不通过");
 
         private String value;
         private int code;
@@ -53,6 +53,16 @@ public class Const {
         public int getCode() {
             return code;
         }
+
+
+        public static ProductStatusEnum codeOf(int code) {
+            for (ProductStatusEnum productStatusEnum : values()) {
+                if (productStatusEnum.getCode() == code) {
+                    return productStatusEnum;
+                }
+            }
+            throw new RuntimeException("没有找到对应的枚举: " + code);
+        }
     }
 
     public interface AlipayCallback {
@@ -66,9 +76,11 @@ public class Const {
         CANCELED(0, "已取消"),
         NO_PAY(10, "未支付"),
         PAID(20, "已付款"),
+        SPLIT(30, "已拆分"),
         SHIPPED(40, "已发货"),
         ORDER_SUCCESS(50, "订单完成"),
         ORDER_CLOSE(60, "订单关闭");
+
         private String value;
         private int code;
 

@@ -1,11 +1,14 @@
 package edu.scu.qz.dao.pojo;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class Shop {
     private Integer id;
 
     private String shopName;
+
+    private BigDecimal balance;
 
     private Integer shopStatus;
 
@@ -31,9 +34,10 @@ public class Shop {
 
     private Date updateTime;
 
-    public Shop(Integer id, String shopName, Integer shopStatus, String shopStatusDesc, Integer producerId, String producerName, String producerProvince, String producerCity, String producerDistrict, String producerAddress, String serverPhone, String bankCard, Date createTime, Date updateTime) {
+    public Shop(Integer id, String shopName, BigDecimal balance, Integer shopStatus, String shopStatusDesc, Integer producerId, String producerName, String producerProvince, String producerCity, String producerDistrict, String producerAddress, String serverPhone, String bankCard, Date createTime, Date updateTime) {
         this.id = id;
         this.shopName = shopName;
+        this.balance = balance;
         this.shopStatus = shopStatus;
         this.shopStatusDesc = shopStatusDesc;
         this.producerId = producerId;
@@ -66,6 +70,14 @@ public class Shop {
 
     public void setShopName(String shopName) {
         this.shopName = shopName == null ? null : shopName.trim();
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public Integer getShopStatus() {

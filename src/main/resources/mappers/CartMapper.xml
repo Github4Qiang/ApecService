@@ -21,45 +21,10 @@
         from apec_cart
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <select id="selectCartByUserIdProductId" resultMap="BaseResultMap" parameterType="map">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_cart
-        WHERE user_id = #{userId} AND product_id = #{productId}
-    </select>
-    <select id="selectCartByUserId" resultMap="BaseResultMap" parameterType="int">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_cart
-        WHERE user_id = #{userId}
-    </select>
-    <select id="selectCartProductCheckedStatusByUserId" resultType="java.lang.Integer" parameterType="int">
-      SELECT COUNT(1) FROM apec_cart WHERE checked = 0 AND user_id = #{userId}
-    </select>
-    <select id="selectCartProductCount" resultType="java.lang.Integer" parameterType="int">
-      SELECT IFNULL(SUM(quantity),0) FROM apec_cart WHERE user_id = #{userId}
-    </select>
-    <select id="selectCheckedCartByUserId" resultMap="BaseResultMap" parameterType="int">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM apec_cart
-        WHERE checked = 1 AND user_id = #{userId}
-    </select>
-
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from apec_cart
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <delete id="deleteByUserIdProductIds" parameterType="map">
-        DELETE FROM apec_cart
-        WHERE user_id = #{userId}
-        <if test="productIdList != null">
-            and product_id in
-            <foreach collection="productIdList" close=")" open="(" index="index" separator="," item="item">
-                #{item}
-            </foreach>
-        </if>
-    </delete>
     <insert id="insert" parameterType="edu.scu.qz.dao.pojo.Cart">
     insert into apec_cart (id, user_id, product_id, 
       quantity, checked, create_time, 
@@ -87,10 +52,10 @@
                 checked,
             </if>
             <if test="createTime != null">
-                now(),
+                create_time,
             </if>
             <if test="updateTime != null">
-                now(),
+                update_time,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -110,10 +75,10 @@
                 #{checked,jdbcType=INTEGER},
             </if>
             <if test="createTime != null">
-                #{createTime,jdbcType=TIMESTAMP},
+                now(),
             </if>
             <if test="updateTime != null">
-                #{updateTime,jdbcType=TIMESTAMP},
+                now(),
             </if>
         </trim>
     </insert>
@@ -151,12 +116,4 @@
       update_time = now()
     where id = #{id,jdbcType=INTEGER}
   </update>
-    <update id="checkedOrUncheckedProduct" parameterType="map">
-        UPDATE apec_cart
-        SET checked = #{checked}, update_time = now()
-        WHERE user_id = #{userId}
-        <if test="productId != null">
-            and product_id = #{productId}
-        </if>
-    </update>
 </mapper>
