@@ -11,12 +11,14 @@
             <arg column="question" javaType="java.lang.String" jdbcType="VARCHAR"/>
             <arg column="answer" javaType="java.lang.String" jdbcType="VARCHAR"/>
             <arg column="role" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="last_login_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
             <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
             <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, username, password, email, phone, question, answer, role, create_time, update_time
+    id, username, password, email, phone, question, answer, role, last_login_time, create_time,
+    update_time
   </sql>
     <select id="checkUsername" resultType="java.lang.Integer">
         SELECT count(1) FROM apec_user
@@ -48,6 +50,20 @@
         SELECT count(1) FROM apec_user
         WHERE email=#{email} AND id!=#{userId}
     </select>
+    <select id="countUser" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM apec_user WHERE role&lt;20
+    </select>
+    <select id="selectUserList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_user WHERE role &lt; 20
+    </select>
+    <select id="selectUserListByRole" resultMap="BaseResultMap" parameterType="int">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_user WHERE role = #{role}
+    </select>
+
     <update id="updatePasswordByUsername" parameterType="map">
         UPDATE apec_user
         SET password = #{passwordNew}, update_time = now()

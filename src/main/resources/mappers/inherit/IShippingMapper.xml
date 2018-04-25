@@ -3,23 +3,22 @@
 <mapper namespace="edu.scu.qz.dao.idao.inherit.IShippingMapper">
     <resultMap id="BaseResultMap" type="edu.scu.qz.dao.pojo.Shipping">
         <constructor>
-            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-            <arg column="receiver_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_mobile" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_province" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_city" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_district" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_address" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="receiver_zip" javaType="java.lang.String" jdbcType="VARCHAR"/>
-            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
-            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="receiver_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_phone" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_province" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_city" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_district" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_address" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="receiver_zip" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+            <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, user_id, receiver_name, receiver_phone, receiver_mobile, receiver_province, receiver_city, 
-    receiver_district, receiver_address, receiver_zip, create_time, update_time
+    id, user_id, receiver_name, receiver_phone, receiver_province, receiver_city, receiver_district,
+    receiver_address, receiver_zip, create_time, update_time
   </sql>
     <select id="selectByShippingIdUserId" parameterType="map" resultMap="BaseResultMap">
         SELECT
@@ -41,7 +40,6 @@
     update apec_shipping
     set receiver_name = #{receiverName,jdbcType=VARCHAR},
       receiver_phone = #{receiverPhone,jdbcType=VARCHAR},
-      receiver_mobile = #{receiverMobile,jdbcType=VARCHAR},
       receiver_province = #{receiverProvince,jdbcType=VARCHAR},
       receiver_city = #{receiverCity,jdbcType=VARCHAR},
       receiver_district = #{receiverDistrict,jdbcType=VARCHAR},

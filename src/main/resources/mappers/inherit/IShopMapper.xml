@@ -30,10 +30,23 @@
     SELECT COUNT(1) FROM apec_shop WHERE id=#{id} AND producer_id=#{producerId}
   </select>
     <select id="countByUserId" resultType="java.lang.Integer" parameterType="int">
-    SELECT COUNT(1) FROM apec_shop WHERE producer_id=#{producerId};
+    SELECT COUNT(1) FROM apec_shop WHERE producer_id=#{producerId}
   </select>
-    <select id="selectByUserId" resultMap="BaseResultMap" parameterType="int">
-    SELECT * FROM apec_shop WHERE producer_id=#{producerId};
+    <select id="selectByUserId" resultType="Shop">
+    SELECT * FROM apec_shop WHERE producer_id=#{producerId}
+    </select>
+    <select id="countShop" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM apec_shop
+    </select>
+    <select id="selectShopList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_shop
+    </select>
+    <select id="selectShopListByStatus" resultMap="BaseResultMap" parameterType="int">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_shop WHERE shop_status=#{status}
     </select>
 
 

@@ -28,11 +28,13 @@ public class Product {
 
     private Integer status;
 
+    private Integer oldStatus;
+
     private Date createTime;
 
     private Date updateTime;
 
-    public Product(Integer id, Integer categoryId, Integer shopId, String name, String subtitle, String shopName, String mainImage, String subImages, String detail, BigDecimal price, Integer stock, Integer status, Date createTime, Date updateTime) {
+    public Product(Integer id, Integer categoryId, Integer shopId, String name, String subtitle, String shopName, String mainImage, String subImages, String detail, BigDecimal price, Integer stock, Integer status, Integer oldStatus, Date createTime, Date updateTime) {
         this.id = id;
         this.categoryId = categoryId;
         this.shopId = shopId;
@@ -45,6 +47,7 @@ public class Product {
         this.price = price;
         this.stock = stock;
         this.status = status;
+        this.oldStatus = oldStatus;
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
@@ -147,6 +150,14 @@ public class Product {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public Integer getOldStatus() {
+        return oldStatus;
+    }
+
+    public void setOldStatus(Integer oldStatus) {
+        this.oldStatus = oldStatus;
     }
 
     public Date getCreateTime() {

@@ -4,6 +4,8 @@ import edu.scu.qz.dao.idao.UserMapper;
 import edu.scu.qz.dao.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface IUserMapper extends UserMapper {
 
     int checkUsername(String username);
@@ -21,4 +23,11 @@ public interface IUserMapper extends UserMapper {
     int checkPassword(@Param("password") String password, @Param("userId") Integer userId);
 
     int checkEmailByUserId(@Param("email") String email, @Param("userId") Integer userId);
+
+    // 不包括管理员
+    Integer countUser();
+    // 不包括管理员
+    List<User> selectUserList();
+
+    List<User> selectUserListByRole(Integer role);
 }

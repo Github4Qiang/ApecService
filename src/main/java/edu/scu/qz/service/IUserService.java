@@ -33,4 +33,6 @@ public interface IUserService {
     ServerResponse checkProducerRole(User user);
 
     ServerResponse changeRole(Integer id, int roleApplicant);
+
+    ServerResponse getUserList(Integer pageNum, Integer pageSize, Integer role);
 }

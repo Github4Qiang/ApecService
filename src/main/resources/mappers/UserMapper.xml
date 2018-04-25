@@ -11,12 +11,14 @@
             <arg column="question" javaType="java.lang.String" jdbcType="VARCHAR"/>
             <arg column="answer" javaType="java.lang.String" jdbcType="VARCHAR"/>
             <arg column="role" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="last_login_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
             <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
             <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, username, password, email, phone, question, answer, role, create_time, update_time
+    id, username, password, email, phone, question, answer, role, last_login_time, create_time, 
+    update_time
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
@@ -31,12 +33,12 @@
     <insert id="insert" parameterType="edu.scu.qz.dao.pojo.User">
     insert into apec_user (id, username, password, 
       email, phone, question, 
-      answer, role, create_time, 
-      update_time)
+      answer, role, last_login_time, 
+      create_time, update_time)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR}, 
-      #{answer,jdbcType=VARCHAR}, #{role,jdbcType=INTEGER}, now(),
-      now())
+      #{answer,jdbcType=VARCHAR}, #{role,jdbcType=INTEGER}, #{lastLoginTime,jdbcType=TIMESTAMP}, 
+      now(), now())
   </insert>
     <insert id="insertSelective" parameterType="edu.scu.qz.dao.pojo.User">
         insert into apec_user
@@ -64,6 +66,9 @@
             </if>
             <if test="role != null">
                 role,
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time,
             </if>
             <if test="createTime != null">
                 create_time,
@@ -97,6 +102,9 @@
             <if test="role != null">
                 #{role,jdbcType=INTEGER},
             </if>
+            <if test="lastLoginTime != null">
+                #{lastLoginTime,jdbcType=TIMESTAMP},
+            </if>
             <if test="createTime != null">
                 now(),
             </if>
@@ -129,6 +137,9 @@
             <if test="role != null">
                 role = #{role,jdbcType=INTEGER},
             </if>
+            <if test="lastLoginTime != null">
+                last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
+            </if>
             <if test="createTime != null">
                 create_time = #{createTime,jdbcType=TIMESTAMP},
             </if>
@@ -147,6 +158,7 @@
       question = #{question,jdbcType=VARCHAR},
       answer = #{answer,jdbcType=VARCHAR},
       role = #{role,jdbcType=INTEGER},
+      last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = now()
     where id = #{id,jdbcType=INTEGER}

@@ -36,7 +36,7 @@ public class Const {
     }
 
     public enum ProductStatusEnum {
-        ON_SALE(1, "在线"), TAKE_DOWN(2, "下架"), DELETE(3, "删除");
+        ON_SALE(1, "在线"), VERIFY(2, "待审核"), TAKE_DOWN(3, "下架"), FORCE_DOWN(4, "强制下架"), LOCK(5, "店铺被锁定"), DELETE(5, "删除"), UN_PASS(6, "审核不通过");
 
         private String value;
         private int code;
@@ -52,6 +52,16 @@ public class Const {
 
         public int getCode() {
             return code;
+        }
+
+
+        public static ProductStatusEnum codeOf(int code) {
+            for (ProductStatusEnum productStatusEnum : values()) {
+                if (productStatusEnum.getCode() == code) {
+                    return productStatusEnum;
+                }
+            }
+            throw new RuntimeException("没有找到对应的枚举: " + code);
         }
     }
 

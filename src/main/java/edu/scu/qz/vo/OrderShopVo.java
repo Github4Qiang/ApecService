@@ -3,16 +3,13 @@ package edu.scu.qz.vo;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class OrderShopProductVo {
-
-    private Integer shopOrderId;
-    private Integer shopId;
-    private String shopName;
-
+public class OrderShopVo {
     private String paymentTypeDesc;
     private String statusDesc;
 
-    private Long subOrderNo;        // 子订单号
+    private Integer shopId;
+    private String shopName;
+    private Long subOrderNo;           // 订单号
     private BigDecimal payment;     // 订单金额
     private Integer paymentType;   // 支付类型
     private Integer status;         // 订单状态
@@ -23,25 +20,30 @@ public class OrderShopProductVo {
     private String closeTime;
     private String createTime;
 
-    private String imageHost;
-
     // 订单明细
     private List<OrderItemVo> orderItemVoList;
 
-    public Integer getShopOrderId() {
-        return shopOrderId;
+    private String imageHost;
+    private Integer shippingId;
+    private String receiverName;
+
+    // 收货地址
+    private ShippingVo shippingVo;
+
+    public String getPaymentTypeDesc() {
+        return paymentTypeDesc;
     }
 
-    public void setShopOrderId(Integer shopOrderId) {
-        this.shopOrderId = shopOrderId;
+    public void setPaymentTypeDesc(String paymentTypeDesc) {
+        this.paymentTypeDesc = paymentTypeDesc;
     }
 
-    public String getImageHost() {
-        return imageHost;
+    public String getStatusDesc() {
+        return statusDesc;
     }
 
-    public void setImageHost(String imageHost) {
-        this.imageHost = imageHost;
+    public void setStatusDesc(String statusDesc) {
+        this.statusDesc = statusDesc;
     }
 
     public Integer getShopId() {
@@ -58,22 +60,6 @@ public class OrderShopProductVo {
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
-    }
-
-    public String getPaymentTypeDesc() {
-        return paymentTypeDesc;
-    }
-
-    public void setPaymentTypeDesc(String paymentTypeDesc) {
-        this.paymentTypeDesc = paymentTypeDesc;
-    }
-
-    public String getStatusDesc() {
-        return statusDesc;
-    }
-
-    public void setStatusDesc(String statusDesc) {
-        this.statusDesc = statusDesc;
     }
 
     public Long getSubOrderNo() {
@@ -154,5 +140,37 @@ public class OrderShopProductVo {
 
     public void setOrderItemVoList(List<OrderItemVo> orderItemVoList) {
         this.orderItemVoList = orderItemVoList;
+    }
+
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
+
+    public Integer getShippingId() {
+        return shippingId;
+    }
+
+    public void setShippingId(Integer shippingId) {
+        this.shippingId = shippingId;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public ShippingVo getShippingVo() {
+        return shippingVo;
+    }
+
+    public void setShippingVo(ShippingVo shippingVo) {
+        this.shippingVo = shippingVo;
     }
 }

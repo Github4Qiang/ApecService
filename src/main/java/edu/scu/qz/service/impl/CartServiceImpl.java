@@ -154,14 +154,15 @@ public class CartServiceImpl implements ICartService {
                         cartShopVoMap.put(product.getShopId(), cartShopVo);
                     }
                     cartProductVoList.add(cartProductVo);
-                }
-                // 如果该商品已被勾选，则加入到整个购物车总价/店铺商品总价中
-                if (cartItem.getChecked() == Const.Cart.CHECKED) {
-                    cartTotalPrice = BigDecimalUtil.add(cartTotalPrice.doubleValue(), cartProductVo.getProductTotalPrice().doubleValue());
-                    // 计算 cartShopVo 中的 shopTotalPrice: 为空则赋值 0
-                    BigDecimal shopTotalPrice = cartShopVo.getCartShopTotalPrice() == null ? BigDecimalUtil.newBigDecimalZero() : cartShopVo.getCartShopTotalPrice();
-                    shopTotalPrice = BigDecimalUtil.add(shopTotalPrice.doubleValue(), cartProductVo.getProductTotalPrice().doubleValue());
-                    cartShopVo.setCartShopTotalPrice(shopTotalPrice);
+
+                    // 如果该商品已被勾选，则加入到整个购物车总价/店铺商品总价中
+                    if (cartItem.getChecked() == Const.Cart.CHECKED) {
+                        cartTotalPrice = BigDecimalUtil.add(cartTotalPrice.doubleValue(), cartProductVo.getProductTotalPrice().doubleValue());
+                        // 计算 cartShopVo 中的 shopTotalPrice: 为空则赋值 0
+                        BigDecimal shopTotalPrice = cartShopVo.getCartShopTotalPrice() == null ? BigDecimalUtil.newBigDecimalZero() : cartShopVo.getCartShopTotalPrice();
+                        shopTotalPrice = BigDecimalUtil.add(shopTotalPrice.doubleValue(), cartProductVo.getProductTotalPrice().doubleValue());
+                        cartShopVo.setCartShopTotalPrice(shopTotalPrice);
+                    }
                 }
             }
         }

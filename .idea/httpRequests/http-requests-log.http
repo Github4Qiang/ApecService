@@ -1,0 +1,30 @@
+GET http://localhost:8080/category/get_top2_category.do
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-04-24T103006.200.json
+
+###
+
+GET http://localhost:8080/customer/category/get_top2_category.do
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-04-24T102938.404.html
+
+###
+
+GET http://localhost:8080/customer
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-04-24T102906.404.html
+
+###
+
+GET http://localhost:8080/customer
+Accept: */*
+Cache-Control: no-cache
+
+###
+

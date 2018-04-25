@@ -55,6 +55,8 @@ public class OrderServiceImpl implements IOrderService {
     private IProductMapper productMapper;
     @Autowired
     private IShippingMapper shippingMapper;
+    @Autowired
+    private IShopMapper shopMapper;
 
     @Override
     public ServerResponse pay(Long orderNo, Integer userId, String path) {
@@ -496,6 +498,74 @@ public class OrderServiceImpl implements IOrderService {
         return ServerResponse.createByErrorMessage("没有找到该订单");
     }
 
+    @Override
+    public ServerResponse getSubOrderList(Integer userId, Integer pageNum, Integer pageSize, Integer status) {
+        Shop shop = shopMapper.selectByUserId(userId);
+        if (shop == null) {
+            return ServerResponse.createByErrorMessage("用户未开通店铺");
+        }
+        List<ShopOrder> shopOrderList;
+        PageHelper.startPage(pageNum, pageSize);
+        if (status < 0) {
+            shopOrderList = shopOrderMapper.selectByShopId(shop.getId());
+        } else {
+            shopOrderList = shopOrderMapper.selectByShopIdStatus(shop.getId(), status);
+        }
+        List<OrderShopProductVo> orderShopProductVoList = Lists.newArrayList();
+        for (ShopOrder shopOrder : shopOrderList) {
+            List<OrderItem> orderItemList = orderItemMapper.getBySubOrderNo(shopOrder.getSubOrderNo());
+            OrderShopProductVo orderShopProductVo = assembleOrderShopProductVo(shopOrder, orderItemList);
+            orderShopProductVoList.add(orderShopProductVo);
+        }
+        // 根据 Product-List 计算 PageInfo 中参数值
+        PageInfo pageResult = new PageInfo(shopOrderList);
+        // 将 PageInfo 中数据换成 ProductItemVo-List
+        pageResult.setList(orderShopProductVoList);
+        return ServerResponse.createBySuccess(pageResult);
+    }
+
+    @Override
+    public ServerResponse<OrderShopVo> getSubOrderDetail(Integer userId, Long subOrderNo) {
+        ShopOrder shopOrder = shopOrderMapper.selectBySubOrderId(subOrderNo);
+        if (shopOrder == null) {
+            return ServerResponse.createByErrorMessage("子订单不存在: " + subOrderNo);
+        }
+        Shop shop = shopMapper.selectByUserId(userId);
+        if (shop == null) {
+            return ServerResponse.createByErrorMessage("用户未开通店铺");
+        } else if (shopOrder.getShopId() != shop.getId()) {
+            return ServerResponse.createByErrorMessage("不是该用户创建的子订单");
+        }
+
+        List<OrderItem> orderItemList = orderItemMapper.getBySubOrderNo(shopOrder.getSubOrderNo());
+
+        OrderShopVo orderShopVo = assembleOrderShopVo(shopOrder, orderItemList);
+        return ServerResponse.createBySuccess(orderShopVo);
+    }
+
+    @Override
+    public ServerResponse send(Integer userId, Long subOrderNo) {
+        ShopOrder shopOrder = shopOrderMapper.selectBySubOrderId(subOrderNo);
+        if (shopOrder == null) {
+            return ServerResponse.createByErrorMessage("子订单不存在: " + subOrderNo);
+        }
+        Shop shop = shopMapper.selectByUserId(userId);
+        if (shop == null) {
+            return ServerResponse.createByErrorMessage("用户未开通店铺");
+        } else if (shopOrder.getShopId() != shop.getId()) {
+            return ServerResponse.createByErrorMessage("不是该用户创建的子订单");
+        }
+
+        ShopOrder updateShopOrder = new ShopOrder();
+        updateShopOrder.setId(shopOrder.getId());
+        updateShopOrder.setStatus(Const.OrderStatusEnum.SHIPPED.getCode());
+        int rowCount = shopOrderMapper.updateByPrimaryKeySelective(updateShopOrder);
+        if (rowCount > 0) {
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByErrorMessage("设置已发货失败");
+    }
+
     private OrderVo assembleOrderVo(Order order, List<ShopOrder> shopOrderList, Map<Integer, List<OrderItem>> orderItemListMap) {
         OrderVo orderVo = new OrderVo();
         orderVo.setOrderNo(order.getOrderNo());
@@ -528,8 +598,44 @@ public class OrderServiceImpl implements IOrderService {
         return orderVo;
     }
 
+
+    private OrderShopVo assembleOrderShopVo(ShopOrder shopOrder, List<OrderItem> orderItemList) {
+        OrderShopVo orderShopVo = new OrderShopVo();
+        orderShopVo.setShopId(shopOrder.getShopId());
+        orderShopVo.setShopName(shopOrder.getShopName());
+        orderShopVo.setPaymentType(shopOrder.getPaymentType());
+        orderShopVo.setPaymentTypeDesc(Const.PaymentTypeEnum.codeOf(shopOrder.getPaymentType()).getValue());
+        orderShopVo.setStatus(shopOrder.getStatus());
+        orderShopVo.setStatusDesc(Const.OrderStatusEnum.codeOf(shopOrder.getStatus()).getValue());
+        orderShopVo.setSubOrderNo(shopOrder.getSubOrderNo());
+        orderShopVo.setPayment(shopOrder.getPayment());
+        orderShopVo.setPaymentTime(DateTimeUtil.dateToStr(shopOrder.getPaymentTime()));
+        orderShopVo.setSendTime(DateTimeUtil.dateToStr(shopOrder.getSendTime()));
+        orderShopVo.setEndTime(DateTimeUtil.dateToStr(shopOrder.getEndTime()));
+        orderShopVo.setCloseTime(DateTimeUtil.dateToStr(shopOrder.getCloseTime()));
+        orderShopVo.setCreateTime(DateTimeUtil.dateToStr(shopOrder.getCreateTime()));
+        orderShopVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
+
+        // 组装收货地址: Shipping
+        orderShopVo.setShippingId(shopOrder.getShippingId());
+        Shipping shipping = shippingMapper.selectByPrimaryKey(shopOrder.getShippingId());
+        if (shipping != null) {
+            orderShopVo.setReceiverName(shipping.getReceiverName());
+            orderShopVo.setShippingVo(assembleShippingVo(shipping));
+        }
+
+        List<OrderItemVo> orderItemVoList = Lists.newArrayList();
+        for (OrderItem orderItem : orderItemList) {
+            OrderItemVo orderItemVo = assembleOrderItemVo(orderItem);
+            orderItemVoList.add(orderItemVo);
+        }
+        orderShopVo.setOrderItemVoList(orderItemVoList);
+        return orderShopVo;
+    }
+
     private OrderShopProductVo assembleOrderShopProductVo(ShopOrder shopOrder, List<OrderItem> orderItemList) {
         OrderShopProductVo orderShopProductVo = new OrderShopProductVo();
+        orderShopProductVo.setShopOrderId(shopOrder.getId());
         orderShopProductVo.setShopId(shopOrder.getShopId());
         orderShopProductVo.setShopName(shopOrder.getShopName());
         orderShopProductVo.setPaymentType(shopOrder.getPaymentType());
@@ -543,6 +649,7 @@ public class OrderServiceImpl implements IOrderService {
         orderShopProductVo.setEndTime(DateTimeUtil.dateToStr(shopOrder.getEndTime()));
         orderShopProductVo.setCloseTime(DateTimeUtil.dateToStr(shopOrder.getCloseTime()));
         orderShopProductVo.setCreateTime(DateTimeUtil.dateToStr(shopOrder.getCreateTime()));
+        orderShopProductVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
 
         List<OrderItemVo> orderItemVoList = Lists.newArrayList();
         for (OrderItem orderItem : orderItemList) {
@@ -573,7 +680,6 @@ public class OrderServiceImpl implements IOrderService {
         shippingVo.setReceiverProvince(shipping.getReceiverProvince());
         shippingVo.setReceiverCity(shipping.getReceiverCity());
         shippingVo.setReceiverDistrict(shipping.getReceiverDistrict());
-        shippingVo.setReceiverMobile(shipping.getReceiverMobile());
         shippingVo.setReceiverZip(shipping.getReceiverZip());
         shippingVo.setReceiverPhone(shipping.getReceiverPhone());
         return shippingVo;

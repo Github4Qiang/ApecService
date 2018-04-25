@@ -17,4 +17,5 @@ public interface IOrderItemMapper extends OrderItemMapper {
     List<OrderItem> getByUserIdSubOrderNo(@Param("userId") Integer userId, @Param("subOrderNo") Long subOrderNo);
 
     List<OrderItem> getBySubOrderNo(Long subOrderNo);
+
 }

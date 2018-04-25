@@ -13,4 +13,10 @@ public interface IShopOrderMapper extends ShopOrderMapper {
     void batchInsertShopOrder(@Param("shopOrderList") List<ShopOrder> shopOrderList);
 
     List<ShopOrder> selectByOrderNo(Long orderNo);
+
+    List<ShopOrder> selectByShopId(Integer shopId);
+
+    List<ShopOrder> selectByShopIdStatus(@Param("shopId") Integer shopId, @Param("status") Integer status);
+
+    ShopOrder selectBySubOrderId(Long subOrderNo);
 }

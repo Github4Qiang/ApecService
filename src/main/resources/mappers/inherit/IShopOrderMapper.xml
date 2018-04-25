@@ -47,5 +47,20 @@
         <include refid="Base_Column_List"/>
         FROM apec_shop_order WHERE order_no=#{orderNo}
     </select>
+    <select id="selectByShopId" resultType="edu.scu.qz.dao.pojo.ShopOrder">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_shop_order WHERE shop_id=#{shopId}
+    </select>
+    <select id="selectBySubOrderId" resultType="edu.scu.qz.dao.pojo.ShopOrder">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_shop_order WHERE sub_order_no=#{subOrderNo}
+    </select>
+    <select id="selectByShopIdStatus" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM apec_shop_order WHERE shop_id=#{shopId} AND status=#{status}
+    </select>
 
 </mapper>
